@@ -1,16 +1,13 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+title: Leading Commercial Water Monitoring
+image: /img/CoverBathroom_ColorCorrected2.jpg
+heading: Leading Commercial Water Monitoring
+subheading: Support sustainability while reducing your water bill
 mainpitch:
-  title: Why Kaldi
+  title: Don't Just Pay the Bill – Get Smart About Your Water
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    Hotel managers have seen their water and sewer bill increase by thousands of dollars due to toilet leaks and a “fix it when it breaks” maintenance style. The problem lies in not having a clear picture of the hotels’ water use until it is too late. Be the first to know where your water is being lost to avoid expensive damage repairs and water waste. 
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,

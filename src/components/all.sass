@@ -2,15 +2,26 @@
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+$flowactive-blue: #3578BD
+$flowactive-blue-invert: #CA8742
+$flowactive-red: #E73C3E
+$flowactive-teal: #4CC0AC
+$flowactive-green: #56B947
+
+$primary: $flowactive-blue
+$primary-invert: $flowactive-blue-invert
 $body-color: #333
 $black: #2b2523
 
+$font-family-sans-serif: "Trebuchet MS", "PT Sans", -apple-system, BlinkMacSystemFont;
+
 .navbar .navbar-menu
+  font-family: $font-family-sans-serif
+  font-size: 18px
+  font-weight: 500
+  color: #D64000
+  height: 10vh
   box-shadow:none !important
 
 .content .taglist
@@ -44,7 +55,7 @@ $black: #2b2523
 
 .full-width-image
     width: 100vw
-    height: 400px
+    height: 90vh
     background-size: cover
     background-position: bottom
     display: flex
@@ -60,13 +71,31 @@ $black: #2b2523
     background-color: #fff
     border-radius: .25rem
     text-decoration: none
-    font-weight: 700
+    font-weight: 500
     color: #CC3700
     text-align: center
     -webkit-box-shadow: inset 0 0 0 2px #CC3700
     box-shadow: inset 0 0 0 2px #f40
     -webkit-transition: all .15s ease
     transition: all .15s ease
+
+.btn-navbar
+    display: inline-block
+    -webkit-transform: translate(0%, 25%);  
+    padding: 12px 16px 10px
+    font-size: 18px
+    font-size: 1rem
+    line-height: 1.25
+    background-color: #fff
+    border-radius: .25rem
+    text-decoration: none
+    font-weight: 700
+    color: $flowactive-teal
+    text-align: center
+    -webkit-box-shadow: inset 0 0 0 2px $flowactive-teal
+    box-shadow: inset 0 0 0 2px $flowactive-teal
+    -webkit-transition: all .15s ease $flowactive-red
+    transition: all .15s ease $flowactive-red
 
 .margin-top-0
   margin-top: 0 !important
@@ -86,11 +115,11 @@ footer.footer
 
 //Menu overrides
 $menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-item-hover-color: $flowactive-blue !important
+$menu-item-hover-background-color: $flowactive-blue
+$menu-item-active-color: $flowactive-blue-invert
+$menu-item-active-background-color:	$flowactive-blue-invert
+$menu-list-border-left: 1px solid $flowactive-blue-invert
 $menu-label-color: $white-ter
 
 
@@ -122,6 +151,9 @@ $menu-label-color: $white-ter
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
 
+
+.has-text-weight-bold
+  font-family: $font-family-sans-serif
 
 @import "~bulma"
 
