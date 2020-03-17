@@ -10,14 +10,15 @@ const FeatureGrid = ({ gridItems }) => (
           <div className="has-text-centered">
             <div
               style={{
-                width: '240px',
+                width: '400px',
                 display: 'inline-block',
               }}
             >
               <PreviewCompatibleImage imageInfo={item} />
             </div>
           </div>
-          <p>{item.text}</p>
+          <h3 className="feature-heading has-text-centered">{item.heading}</h3>
+          <p className="feature-text">{item.text}</p>
         </section>
       </div>
     ))}
@@ -28,6 +29,7 @@ FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      heading: PropTypes.string,
       text: PropTypes.string,
     })
   ),

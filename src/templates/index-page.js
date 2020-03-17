@@ -75,7 +75,7 @@ export const IndexPageTemplate = ({
                     <h1 className="title">{mainpitch.title}</h1>
                   </div>
                   <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
+                  <p className="index-text">{mainpitch.description}</p>
                   </div>
                 </div>
                 <div className="columns">
@@ -83,7 +83,7 @@ export const IndexPageTemplate = ({
                     <h3 className="has-text-weight-semibold is-size-2">
                       {heading}
                     </h3>
-                    <p>{description}</p>
+                    <p className="index-text">{description}</p>
                   </div>
                 </div>
                 <Features gridItems={intro.blurbs} />
@@ -182,6 +182,7 @@ export const pageQuery = graphql`
                 }
               }
             }
+            heading
             text
           }
           heading
