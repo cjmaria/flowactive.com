@@ -2,7 +2,6 @@
 templateKey: index-page
 title: Leading Commercial Water Monitoring
 image: /img/CoverBathroom_ColorCorrected2.jpg
-heading: Leading Commercial Water Monitoring
 subheading: Support sustainability while reducing your water bill
 mainpitch:
   title: Don't Just Pay the Bill – Get Smart About Your Water
