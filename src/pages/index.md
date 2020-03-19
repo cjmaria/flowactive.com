@@ -1,18 +1,16 @@
 ---
 templateKey: index-page
 title: Leading Commercial Water Monitoring
-image: /img/CoverBathroom_ColorCorrected2.jpg
+image: /img/CoverBathroom_ColorCorrected_1440p.jpg
 subheading: Support sustainability while reducing your water bill
 mainpitch:
-  title: Don't Just Pay the Bill – Get Smart About Your Water
+  title: Don't Just Pay the Bill
+  subtitle: Get Smart About Your Water
   description: >
     Hotel managers have seen their water and sewer bill increase by thousands of dollars due to toilet leaks and a “fix it when it breaks” maintenance style. The problem lies in not having a clear picture of the hotels’ water use until it is too late. Be the first to know where your water is being lost to avoid expensive damage repairs and water waste. 
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
 intro:
+  title: Introducting FirstDrops
+  subtitle: A new was....
   blurbs:
     - image: /img/IndexImg1.jpg
       heading: Know When to Repair
@@ -20,28 +18,26 @@ intro:
         FirstDrops™ software recognizes signs of a possible leak that would 
         otherwise go undetected. Once you are notified, a maintenance call can be
         scheduled in advance, ensuring the unit is unoccupied during repair.
-    - image: /img/coffee-gear.png
+    - image: /img/IndexImg2.jpg
       heading: Track Every Toilet Fixture
       text: >
         Pinpoint the size and location of leaks with our out-of-sight device, 
         FirstDrops™. Our software will analyze the data and tell you the exact 
         toilet that needs to be fixed without disrupting your guests.
-    - image: /img/tutorials.png
+    - image: /img/IndexImg3.jpg
       heading: Optimize Your Water Usage
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      heading: WITTY TITLE HERE
       text: >
         The longer you use the device, the more it learns about your fixtures, 
         making it easier to predict possible leaks. FirstDrops™ also provides you 
         with a detailed water usage report so you can keep track of your year-round 
         water savings and carbon footprint.
-  heading: What we offer
+    - image: /img/IndexImg4.jpg
+      heading: Protected in Seconds
+      text: >
+        The FirstDrops™ device is the least invasive solution to preventing the most
+        costly kinds of leaks. The FirstDrops™ device can be installed in less than 90
+        seconds and requires no risky plumbing alterations.
+  heading: 
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
     java’s origin and support the farmers that grew it. We take coffee
