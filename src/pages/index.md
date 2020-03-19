@@ -9,8 +9,8 @@ mainpitch:
   description: >
     Hotel managers have seen their water and sewer bill increase by thousands of dollars due to toilet leaks and a “fix it when it breaks” maintenance style. The problem lies in not having a clear picture of the hotels’ water use until it is too late. Be the first to know where your water is being lost to avoid expensive damage repairs and water waste. 
 intro:
-  title: Introducting FirstDrops
-  subtitle: A new was....
+  title: Introducing FirstDrops™
+  subtitle: A smart IoT device that installs on your existing toilet in under 90 seconds
   blurbs:
     - image: /img/IndexImg1.jpg
       heading: Know When to Repair

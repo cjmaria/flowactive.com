@@ -50,7 +50,7 @@ export const IndexPageTemplate = ({
           {title}
         </h1>
         <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen has-text-centered"
           style={{
             boxShadow:
               'rgb(53, 120, 189) 0.5rem 0px 0px, rgb(53, 120, 189) -0.5rem 0px 0px',
@@ -71,7 +71,7 @@ export const IndexPageTemplate = ({
             <div className="column is-10 is-offset-1">
               <div className="content">
                 <div className="content">
-                  <div className="tile mainpitch-title">
+                  <div className="tile mainpitch-title has-text-centered">
                     <h1 className="title">{mainpitch.title}</h1>
                   </div>
                   <div className="tile mainpitch-subtitle">
@@ -82,8 +82,8 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
                 <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
+                  <div className="intro-titles column is-12 has-text-centered">
+                    <h3 className="has-text-weight-semibold is-size-3">
                       {intro.title}
                     </h3>
                     <p className="index-text">{intro.subtitle}</p>
