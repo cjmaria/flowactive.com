@@ -75,7 +75,7 @@ const Navbar = class extends React.Component {
 
             </div>
             <div className="navbar-end has-text-centered">
-              <div className="column is-12 has-text-centered">
+              <div className="btn-box is-12 has-text-centered">
                   <Link className="btn-navbar" to="google.com">
                     Log In
                   </Link>
