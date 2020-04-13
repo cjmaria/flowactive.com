@@ -12,13 +12,13 @@ class TeamRoll extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="is-parent  column is-4" key={post.id}>
               <article
-                className={`blog-list-item tile is-info is-child box notification ${
+                className={`team-list-item tile is-info is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
-                <header>
+                <header className="teamroll-thumbnail-header">
                   {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
@@ -29,25 +29,25 @@ class TeamRoll extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
+                </header>
+                <p className="post-meta has-text-centered">
                     <Link
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
+                    <br />
                     <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
+                      {post.frontmatter.role}
                     </span>
-                  </p>
-                </header>
+                </p>
                 <p className="has-text-centered">
                   {post.excerpt}
                   <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
+                    More about {post.frontmatter.preferredname} →
                   </Link>
                 </p>
               </article>
@@ -71,24 +71,26 @@ export default () => (
     query={graphql`
       query TeamRollQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { order: ASC, fields: [frontmatter___ordering] }
           filter: { frontmatter: { templateKey: { eq: "team-post" } } }
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 300)
               id
               fields {
                 slug
               }
               frontmatter {
                 title
+                preferredname
                 templateKey
-                date(formatString: "MMMM DD, YYYY")
+                role
+                ordering
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 200, quality: 20) {
                       ...GatsbyImageSharpFluid
                     }
                   }
