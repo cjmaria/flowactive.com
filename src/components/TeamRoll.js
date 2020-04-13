@@ -14,7 +14,7 @@ class TeamRoll extends React.Component {
           posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`blog-list-item tile is-info is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
@@ -42,7 +42,7 @@ class TeamRoll extends React.Component {
                     </span>
                   </p>
                 </header>
-                <p>
+                <p className="has-text-centered">
                   {post.excerpt}
                   <br />
                   <br />
