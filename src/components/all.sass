@@ -4,7 +4,9 @@
 // Kaldi logo brand color: #FD461E
 
 $flowactive-blue: #3578BD
+$flowactive-dark-blue: #144270
 $flowactive-blue-invert: #CA8742
+$flowactive-light-green: #ADBD22
 $flowactive-red: #E73C3E
 $flowactive-teal: #4CC0AC
 $flowactive-green: #56B947
@@ -12,7 +14,7 @@ $flowactive-green: #56B947
 $primary: $flowactive-blue
 $primary-invert: $flowactive-blue-invert
 $body-color: #333
-$black: #2b2523
+$white: #F5F5F5
 
 $font-family-sans-serif: "Trebuchet MS", "Roboto", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -55,9 +57,12 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
   font-family: $font-family-menubar
   font-size: 1.2em
   font-weight: 500
-  color: #D64000
   min-height: 10vh
-  box-shadow:none !important
+  background-color: #fff !important
+
+.navbar
+  background-color: #fff !important
+  box-shadow: 0px 0px 7px #333
 
 .content .taglist
   list-style: none
@@ -128,7 +133,7 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
   padding: 0 1rem
 footer.footer
   padding: 3rem 0rem 0rem
-  background-color: transparent
+  background-color: $flowactive-dark-blue
 
 //Menu overrides
 $menu-item-color: $white-ter
