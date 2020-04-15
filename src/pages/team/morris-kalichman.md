@@ -1,12 +1,12 @@
 ---
 templateKey: team-post
-name: Steve Lobel
+name: Morris Kalichman
 role: Advisor
-ordering: 203
+ordering: 205
 iscoreteam: false
 isboardmember: false
 isadvisor: true
-oneliner: Insurance & Cyber Risk Leader, experienced entrepreneur.
+oneliner: Commercial Multi-Unit Real Estate Owner and Developer
 headshotimage:
 tags:
   - Team

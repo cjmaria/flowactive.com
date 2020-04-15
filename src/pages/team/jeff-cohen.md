@@ -1,12 +1,12 @@
 ---
 templateKey: team-post
-name: Steve Lobel
+name: Jeff Cohen
 role: Advisor
-ordering: 203
+ordering: 201
 iscoreteam: false
 isboardmember: false
 isadvisor: true
-oneliner: Insurance & Cyber Risk Leader, experienced entrepreneur.
+oneliner: Fundraising Leader, seasoned investor with growth experience
 headshotimage:
 tags:
   - Team

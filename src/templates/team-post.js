@@ -96,7 +96,6 @@ export const pageQuery = graphql`
         role
         ordering
         title
-        preferredname
         description
         tags
       }

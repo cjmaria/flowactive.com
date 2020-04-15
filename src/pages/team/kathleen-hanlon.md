@@ -1,12 +1,12 @@
 ---
 templateKey: team-post
-name: Steve Lobel
+name: Kathleen Hanlon
 role: Advisor
-ordering: 203
+ordering: 202
 iscoreteam: false
 isboardmember: false
 isadvisor: true
-oneliner: Insurance & Cyber Risk Leader, experienced entrepreneur.
+oneliner: Human Resources Leader, experienced HR consultant with growth experience
 headshotimage:
 tags:
   - Team

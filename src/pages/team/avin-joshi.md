@@ -1,12 +1,12 @@
 ---
 templateKey: team-post
-name: Steve Lobel
+name: Avin Joshi
 role: Advisor
-ordering: 203
+ordering: 204
 iscoreteam: false
 isboardmember: false
 isadvisor: true
-oneliner: Insurance & Cyber Risk Leader, experienced entrepreneur.
+oneliner: Software and Analytics Founder, Entrepreneur with successful M&A
 headshotimage:
 tags:
   - Team
