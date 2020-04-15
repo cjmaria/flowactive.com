@@ -33,15 +33,15 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar"
-        role="navigation"
-        aria-label="main-navigation"
-      >
+      <nav className="navbar" role="navigation" aria-label="main-navigation">
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Flow Active" style={{ width: '200px', maxHeight: '2.75rem' }} />
+              <img
+                src={logo}
+                alt="Flow Active"
+                style={{ width: '200px', maxHeight: '2.75rem' }}
+              />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -74,13 +74,15 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/team">
                 Team
               </Link>
-
             </div>
             <div className="navbar-end has-text-centered">
               <div className="btn-box is-12 has-text-centered">
-                  <a className="btn-navbar" href="https://panel.mobius-labs.com/login/login.php">
-                    Log In
-                  </a>
+                <a
+                  className="btn-navbar"
+                  href="https://panel.mobius-labs.com/login/login.php"
+                >
+                  Log In
+                </a>
               </div>
             </div>
           </div>

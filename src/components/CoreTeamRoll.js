@@ -13,7 +13,9 @@ class CoreTeamRoll extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
             <div className="is-parent column is-3" key={post.id}>
-              <article className={`team-list-item tile is-info is-child box notification `}>
+              <article
+                className={`team-list-item tile is-info is-child box notification `}
+              >
                 <header className="teamroll-thumbnail-header">
                   {post.frontmatter.headshotimage ? (
                     <div className="featured-thumbnail">
@@ -32,9 +34,7 @@ class CoreTeamRoll extends React.Component {
                 <span className="subtitle has-text-centered is-size-6 is-block">
                   {post.frontmatter.role}
                 </span>
-                <p className="has-text-centered">
-                  {post.excerpt}
-                </p>
+                <p className="has-text-centered">{post.excerpt}</p>
               </article>
             </div>
           ))}
@@ -57,11 +57,11 @@ export default () => (
       query CoreTeamRollQuery {
         allMarkdownRemark(
           sort: { order: ASC, fields: [frontmatter___ordering] }
-          filter: { 
-            frontmatter: { 
-              templateKey: { eq: "team-post" } 
+          filter: {
+            frontmatter: {
+              templateKey: { eq: "team-post" }
               iscoreteam: { eq: true }
-            } 
+            }
           }
         ) {
           edges {

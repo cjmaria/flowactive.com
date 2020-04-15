@@ -7,9 +7,7 @@ export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div
-          className="margin-top-0"
-        >
+        <div className="margin-top-0">
           <h1
             className="has-text-weight-bold has-text-centered is-size-2"
             style={{

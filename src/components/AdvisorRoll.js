@@ -12,15 +12,14 @@ class AdvisorRoll extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
             <div className="is-parent column is-3" key={post.id}>
-              <article className={`team-list-item tile is-info is-child box notification `}>
+              <article
+                className={`team-list-item tile is-info is-child box notification `}
+              >
+                <h2 className="title has-text-centered has-text-black is-size-5">
+                  {post.frontmatter.name}
+                </h2>
 
-                    <h2 className="title has-text-centered has-text-black is-size-5">
-                      {post.frontmatter.name}
-                    </h2>
-                
-                <p className="has-text-centered">
-                {post.frontmatter.oneliner}
-                </p>
+                <p className="has-text-centered">{post.frontmatter.oneliner}</p>
               </article>
             </div>
           ))}
@@ -43,11 +42,11 @@ export default () => (
       query AdvisorRollQuery {
         allMarkdownRemark(
           sort: { order: ASC, fields: [frontmatter___ordering] }
-          filter: { 
-            frontmatter: { 
-              templateKey: { eq: "team-post" } 
+          filter: {
+            frontmatter: {
+              templateKey: { eq: "team-post" }
               isadvisor: { eq: true }
-            } 
+            }
           }
         ) {
           edges {

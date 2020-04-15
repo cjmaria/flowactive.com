@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'FlowActive',
-    description:
-      'FlowActive Inc. Website',
+    description: 'FlowActive Inc. Website',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
