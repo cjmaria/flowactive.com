@@ -90,8 +90,8 @@ export const IndexPageTemplate = ({
                 <Features gridItems={intro.blurbs} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/">
-                      Link to product page when complete
+                    <Link className="btn" to="/product">
+                      Learn More
                     </Link>
                   </div>
                 </div>
@@ -126,6 +126,9 @@ IndexPageTemplate.propTypes = {
     subtitle: PropTypes.string,
     blurbs: PropTypes.array,
   }),
+  collaborators: PropTypes.shape({
+    logos: PropTypes.array,
+  }),
 }
 
 const IndexPage = ({ data }) => {
@@ -141,6 +144,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        collaborators={frontmatter.collaborators}
       />
     </Layout>
   )
