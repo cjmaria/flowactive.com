@@ -6,10 +6,12 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import YouTubeVideo from '../components/YouTubeVideo'
 
 export const ProductPageTemplate = ({
   image,
   title,
+  video,
   heading,
   description,
   intro,
@@ -19,16 +21,9 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <div className="content">
-    <div
-      className="full-width-image-container margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
+
       <h2
-        className="has-text-weight-bold is-size-1"
+        className="has-text-weight-bold has-text-centered is-size-3"
         style={{
           boxShadow:
             '0.5rem 0 0 rgb(53, 120, 189), -0.5rem 0 0 rgb(53, 120, 189)',
@@ -39,13 +34,12 @@ export const ProductPageTemplate = ({
       >
         {title}
       </h2>
-    </div>
-    <section className="section section--gradient">
       <div className="container">
         <div className="section">
           <div className="columns">
-            <div className="column is-7 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
+            <div className="column is-full has-text-centered">
+              <YouTubeVideo videoInfo={video}/>
+              <h3 className="has-text-weight-semibold is-size-4">{heading}</h3>
               <p>{description}</p>
             </div>
           </div>
@@ -101,13 +95,17 @@ export const ProductPageTemplate = ({
           </div>
         </div>
       </div>
-    </section>
+
   </div>
 )
 
 ProductPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
+  video: PropTypes.shape({
+    ytid: PropTypes.string,
+    alttext: PropTypes.string,
+  }),
   heading: PropTypes.string,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -137,6 +135,7 @@ const ProductPage = ({ data }) => {
       <ProductPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
+        video={frontmatter.videoInfo}
         heading={frontmatter.heading}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -164,6 +163,10 @@ export const productPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        videoInfo {
+          ytid
+          alttext
+        }
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

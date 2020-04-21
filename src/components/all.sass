@@ -202,12 +202,19 @@ $menu-label-color: $white-ter
 @import "~bulma"
 
 
+.YTVideoEmbed
+  width: 60%
+  margin-left: 20%
+  position: relative
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%;
   .team-list-item .featured-thumbnail
     flex-basis: 50%;
+  .YTVideoEmbed
+    margin-left: 10%
+    width: 80%
 
 
 +mobile
@@ -223,3 +230,6 @@ $menu-label-color: $white-ter
     text-align: center;
     max-width: 50%;
     margin: 0 0 1em;
+  .YTVideoEmbed
+    margin-left: 0%
+    width: 100%

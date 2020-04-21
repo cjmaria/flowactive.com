@@ -2,8 +2,11 @@
 templateKey: 'product-page'
 path: /products
 title: How does FirstDrops™ work?
+videoInfo:
+  ytid: eJ6nJnFMIqk
+  alttext: FirstDrops Install Video
 image: /img/jumbotron.jpg
-heading: Great coffee with a conscience
+heading: 'Turn your current plumbing system into a smart water management system in three simple steps:'
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
