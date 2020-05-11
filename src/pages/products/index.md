@@ -65,7 +65,6 @@ testimonials:
       much water was currently consumed, Joe was uncertain if this would be a worthwhile 
       investment. The Solution: After using FirstDrops™ for one month, he was easily able to see that the tenant was using an average of 59 gallons of water, about $1, each day in one fixture. After this, he made the decision to upgrade to a more efficient toilet as the payback was about 20 months. It was clearly a good investment.
 
-full_image: /img/products-full-width.jpg
 pricing:
   heading: Return on Investment
   description: >-

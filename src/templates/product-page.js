@@ -173,7 +173,6 @@ const ProductPage = ({ data }) => {
         intro={frontmatter.intro}
         main={frontmatter.main}
         testimonials={frontmatter.testimonials}
-        fullImage={frontmatter.full_image}
         pricing={frontmatter.pricing}
       />
     </Layout>
@@ -258,13 +257,6 @@ export const productPageQuery = graphql`
         }
         testimonials {
           quote
-        }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
         }
         pricing {
           heading
