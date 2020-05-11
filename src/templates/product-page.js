@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
+import ProductFeatures from '../components/ProductFeatures'
 import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import YouTubeVideo from '../components/YouTubeVideo'
 import ProductBar from '../components/ProductBar'
+import { Link } from 'gatsby'
 
 
 export const ProductPageTemplate = ({
@@ -52,12 +52,9 @@ export const ProductPageTemplate = ({
           {subtitle}
         </h1>
         <div className="btn-box is-12 has-text-centered">
-                <a
-                  className="btn-product"
-                  href="https://panel.mobius-labs.com/login/login.php"
-                >
-                  Learn More
-                </a>
+                    <Link className="btn-product" to="/contact">
+                      Contact Us
+                    </Link>
         </div>
         <div className="has-text-centered">
           <div className="product-image-container"
@@ -79,18 +76,18 @@ export const ProductPageTemplate = ({
       
       <div className="container"  style={{ zIndex: '-1', position: 'relative' }}>
         <div className="section">
-          <div className="columns">
+          <div className="columns" id="HowItWorks">
             <div className="column is-full has-text-centered">
+              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
+              <p className="is-size-5">{description}</p>
               <YouTubeVideo videoInfo={video}/>
-              <h3 className="has-text-weight-semibold is-size-4">{heading}</h3>
-              <p>{description}</p>
             </div>
           </div>
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <Features gridItems={intro.blurbs} />
+              <ProductFeatures gridItems={intro.blurbs} />
               <div className="columns">
-                <div className="column is-7">
+                <div className="column  has-text-centered" id="CustomerSuccess">
                   <h1 className="has-text-weight-semibold is-size-1">
                     {main.heading}
                   </h1>
@@ -99,41 +96,27 @@ export const ProductPageTemplate = ({
               </div>
               <div className="tile is-ancestor">
                 <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
-                    </div>
-                  </div>
                   <div className="tile is-parent">
                     <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image3} />
+                      <PreviewCompatibleImage imageInfo={main.image1} />
                     </article>
                   </div>
                 </div>
               </div>
               <Testimonials testimonials={testimonials} />
-              <div
-                className="full-width-image-container"
-                style={{
-                  backgroundImage: `url(${
-                    fullImage.childImageSharp
-                      ? fullImage.childImageSharp.fluid.src
-                      : fullImage
-                  })`,
-                }}
-              />
+              <div className="tile is-ancestor" id="ReturnOnInvestment">
+                <div className="tile is-vertical">
+                  <div className="tile is-parent">
+                    <article className="tile is-child">
+                      <PreviewCompatibleImage imageInfo={main.image2} />
+                    </article>
+                  </div>
+                </div>
+              </div>
               <h2 className="has-text-weight-semibold is-size-2">
                 {pricing.heading}
               </h2>
               <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
             </div>
           </div>
         </div>
@@ -164,14 +147,12 @@ ProductPageTemplate.propTypes = {
     description: PropTypes.string,
     image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   }),
   testimonials: PropTypes.array,
   fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   pricing: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
-    plans: PropTypes.array,
   }),
 }
 
@@ -245,6 +226,7 @@ export const productPageQuery = graphql`
                 }
               }
             }
+            heading
             text
           }
           heading
@@ -257,7 +239,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
+                fluid(maxWidth: 800, quality: 70) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -267,17 +249,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
+                fluid(maxWidth: 800, quality: 70) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -285,7 +257,6 @@ export const productPageQuery = graphql`
           }
         }
         testimonials {
-          author
           quote
         }
         full_image {
@@ -298,12 +269,6 @@ export const productPageQuery = graphql`
         pricing {
           heading
           description
-          plans {
-            description
-            items
-            plan
-            price
-          }
         }
       }
     }

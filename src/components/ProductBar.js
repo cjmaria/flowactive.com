@@ -53,17 +53,14 @@ const Productbar = class extends React.Component {
             className={`productbar-menu ${this.state.navBarActiveClass}`}
             
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/products">
-                Why FirstDrops
-              </Link>
-              <Link className="navbar-item" to="/about">
+            <div className="navbar-start has-text-centered" style={{justifyContent: 'center'}}>
+              <Link className="navbar-item" to="/products#HowItWorks">
                 How It Works
               </Link>
-              <Link className="navbar-item" to="/blog">
-                Use Cases
+              <Link className="navbar-item" to="/products#CustomerSuccess">
+                Customer Successes
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className="navbar-item" to="/products#ReturnOnInvestment">
                 Return on Investment
               </Link>
             </div>

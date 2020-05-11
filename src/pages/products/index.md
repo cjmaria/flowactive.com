@@ -9,41 +9,32 @@ videoInfo:
   ytid: eJ6nJnFMIqk
   alttext: FirstDrops Install Video
 image: /img/jumbotron.jpg
-heading: 'Turn your current plumbing system into a smart water management system in three simple steps:'
+heading: 'Transform your water system in three simple steps'
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  FirstDrops lets you turn your current plumbing system into a smart water 
+  management system. FirstDrops is easy to install and uses cutting edge techniques
+  to measure water loss where it matters most. 
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/InToilet.jpg 
+      heading: Install
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
+        The FirstDrops™ team will install each of the pre-programmed devices 
+        into your bathroom toilet and connect it to your internet. Our team will
+        work with your buildings’ internet provider to make this a simple and easy
+        process.
+    - image: /img/IndexImg3.jpg
+      heading: Analyze
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
+        Once your devices are installed, the smart water management system comes 
+        to life on your portal and you are able to track what is happening in your
+        building. You will also receive a weekly overview of your water consumption.
+    - image: /img/iPhoneAppUse.jpg
+      heading: Take Action
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+        Log on to your portal and get real-time data on the water being used in your 
+        building. Get notified of unusual usage and see problems before they happen.
+
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
@@ -51,57 +42,33 @@ intro:
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
 main:
-  heading: Great coffee with no compromises
+  heading: Customer Successes
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+    FirstDrops is designed for the hospitality and property management industry in
+    mind. We offer a simple and effective experience that our customers love.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    image: /img/HotelHallway2.jpg
   image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
+    alt: Hotel
+    image: /img/RowHouses2.jpg
 testimonials:
-  - author: Elisabeth Kaurismäki
-    quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
-    quote: >-
-      Kaldi is the place to go if you want the best quality coffee. I love their
-      stance on empowering farmers and transparency.
+  - quote: >-
+      Ed is the Chief Engineer of a 172 room hotel in the New England region. 
+      
+      Ed heard about our water sensor device from a friend who had recommended our device. Ed was interested in anything that could help his workload as he was overwhelmed and needed better tools. We were a better tool. Ed invited us to demo install 20 units across five floors. It took us 45 minutes during room turnover and he was up and running. In the first month, we found two water loss events that convinced him that we were the tool he was looking for. On a weekend of a college sporting event, we received alerts from our devices that caused us to call Ed at 4:30 AM on a Saturday morning. For the prior 10 hours, the toilet in the Presidential Suite on the top floor was pouring water at a very high rate, costing almost $36.00 per day! The broken unit consumed about 1,000 gal between the time that we called Ed and he was able to see the room. The average water consumption of the other 19 rooms over this period was 12 gal. When our team went to take a look, we found that the toilet was broken with the inline valve trying to stop it from leaking on the floor. While most of it was going down the overflow tube, it would have gone undetected for a week or two until someone found it, or worse, the water hitting the floor could have seeped into rooms below.
+      
+      Ed, his general manager and their CFO became our biggest fans.
+  - quote: >-
+      The Situation: Joe is a landlord that owns over 10 properties. One of Joe’s
+      tenants requested a new toilet that is more water efficient. Without knowing how 
+      much water was currently consumed, Joe was uncertain if this would be a worthwhile 
+      investment. The Solution: After using FirstDrops™ for one month, he was easily able to see that the tenant was using an average of 59 gallons of water, about $1, each day in one fixture. After this, he made the decision to upgrade to a more efficient toilet as the payback was about 20 months. It was clearly a good investment.
+
 full_image: /img/products-full-width.jpg
 pricing:
-  heading: Monthly subscriptions
+  heading: Return on Investment
   description: >-
-    We make it easy to make great coffee a part of your life. Choose one of our
-    monthly subscription plans to receive great coffee at your doorstep each
-    month. Contact us about more details and payment info.
-  plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
-      items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
-      plan: Small
-      price: '50'
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
-      items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
-      plan: Big
-      price: '80'
-    - description: Want a few tiny batches from different varieties? Try our custom plan
-      items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
-      plan: Custom
-      price: '??'
+    We know how critical expenses are to a hotel operator and real estate manager. We would like to share what we have learned and help you estimate whether our solution is a good fit for you. We can estimate your ROI and payback in just a few minutes. We are happy to discuss it with you further for a more detailed analysis. We know your ROI and Operating Margin matter. The blended ROI is between 4-18 months. We improve the Operating Margin enough to notice on the bottom line. Contact us for more information. 
+
 ---
