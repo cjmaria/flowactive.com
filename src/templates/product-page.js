@@ -7,10 +7,14 @@ import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import YouTubeVideo from '../components/YouTubeVideo'
+import ProductBar from '../components/ProductBar'
+
 
 export const ProductPageTemplate = ({
-  image,
+  productimage,
+  smalltitle,
   title,
+  subtitle,
   video,
   heading,
   description,
@@ -21,20 +25,59 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <div className="content">
-
-      <h2
-        className="has-text-weight-bold has-text-centered is-size-3"
-        style={{
-          boxShadow:
+      <div style={{
+        boxShadow:
             '0.5rem 0 0 rgb(53, 120, 189), -0.5rem 0 0 rgb(53, 120, 189)',
-          backgroundColor: 'rgb(53, 120, 189)',
-          color: 'white',
-          padding: '1rem',
-        }}
+        backgroundColor: '#fff',
+      }}
       >
-        {title}
-      </h2>
-      <div className="container">
+        <h2
+          className="product-page-smalltitle has-text-centered is-size-6"
+          style={{
+            color: '#4a4a4a',
+            paddingTop: '3rem',
+          }}
+        >
+          {smalltitle}
+        </h2>
+        <h1
+          className="product-page-title has-text-centered is-size-1"
+          style={{
+            color: '#4a4a4a',
+            paddingTop: '1rem',
+            margin: 0,
+          }}
+        >
+          {title} <br/>
+          {subtitle}
+        </h1>
+        <div className="btn-box is-12 has-text-centered">
+                <a
+                  className="btn-product"
+                  href="https://panel.mobius-labs.com/login/login.php"
+                >
+                  Learn More
+                </a>
+        </div>
+        <div className="has-text-centered">
+          <div className="product-image-container"
+            style={{
+              width: '300px',
+              display: 'inline-block',
+              paddingTop: '2em',
+              paddingBottom: '2em',
+            }}
+          >
+            <PreviewCompatibleImage imageInfo={productimage} />
+          </div>
+        
+        </div>
+      </div>
+
+      <ProductBar containerClass='productbar' />
+
+      
+      <div className="container"  style={{ zIndex: '-1', position: 'relative' }}>
         <div className="section">
           <div className="columns">
             <div className="column is-full has-text-centered">
@@ -48,9 +91,9 @@ export const ProductPageTemplate = ({
               <Features gridItems={intro.blurbs} />
               <div className="columns">
                 <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
+                  <h1 className="has-text-weight-semibold is-size-1">
                     {main.heading}
-                  </h3>
+                  </h1>
                   <p>{main.description}</p>
                 </div>
               </div>
@@ -99,9 +142,14 @@ export const ProductPageTemplate = ({
   </div>
 )
 
+
+
 ProductPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  smalltitle: PropTypes.string,
   title: PropTypes.string,
+  subtitle: PropTypes.string,
+  productimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   video: PropTypes.shape({
     ytid: PropTypes.string,
     alttext: PropTypes.string,
@@ -134,7 +182,10 @@ const ProductPage = ({ data }) => {
     <Layout>
       <ProductPageTemplate
         image={frontmatter.image}
+        productimage={frontmatter.productimage}
         title={frontmatter.title}
+        smalltitle={frontmatter.smalltitle}
+        subtitle={frontmatter.subtitle}
         video={frontmatter.videoInfo}
         heading={frontmatter.heading}
         description={frontmatter.description}
@@ -162,7 +213,16 @@ export const productPageQuery = graphql`
   query ProductPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
+        smalltitle
         title
+        subtitle
+        productimage {
+          childImageSharp {
+            fluid(maxWidth: 256, quality: 50) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         videoInfo {
           ytid
           alttext

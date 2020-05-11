@@ -1,7 +1,10 @@
 ---
 templateKey: 'product-page'
 path: /products
-title: How does FirstDrops™ work?
+smalltitle: FIRSTDROPS WATER MONITORING
+title: Small Sensors
+subtitle: Big Insights
+productimage: /img/BlockBlue.png
 videoInfo:
   ytid: eJ6nJnFMIqk
   alttext: FirstDrops Install Video

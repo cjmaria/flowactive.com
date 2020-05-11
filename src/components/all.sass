@@ -14,7 +14,7 @@ $flowactive-green: #56B947
 $primary: $flowactive-blue
 $primary-invert: $flowactive-blue-invert
 $body-color: #333
-$white: #F5F5F5
+$white: #efeef1
 $info: #fff
 
 $font-family-sans-serif: "Trebuchet MS", "Roboto", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -65,6 +65,40 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
   background-color: #fff !important
   box-shadow: 0px 0px 7px #333
 
+.productbar .productbar-menu
+  font-family: $font-family-menubar
+  font-size: 1.2em
+  font-weight: 500
+  min-height: 5rem
+  padding-top: 1.2rem
+  background-color: $flowactive-blue !important
+
+.productbar
+  background-color: $flowactive-blue !important
+  box-shadow: 0px 0px 7px #333
+  width: 100vw
+  z-index: 10;
+
+.hidden-product-bar
+  background-color: $flowactive-blue !important
+  box-shadow: 0px 0px 7px #333
+  width: 100vw
+
+.hidden-product-bar .productbar-menu
+  font-family: $font-family-menubar
+  font-size: 1.2em
+  font-weight: 500
+  min-height: 5rem
+  padding-top: 1.2rem
+  background-color: $flowactive-blue !important
+
+.productbar-menu .navbar-start .navbar-item
+  color: #fff !important
+  &:hover
+    background-color: #2f6caa !important
+    border-radius: 0.36rem
+    box-shadow: 0px 0px 5px #1F4871
+
 .content .taglist
   list-style: none
   margin-bottom: 0
@@ -114,6 +148,22 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
     -webkit-transition: all .15s ease $flowactive-red
     transition: all .15s ease $flowactive-red
 
+.btn-product
+    padding: 12px 24px 12px
+    font-size: 18px
+    font-size: 1rem
+    line-height: 1.25
+    background-color: $flowactive-blue
+    border-radius: .36rem
+    text-decoration: none
+    font-weight: 700
+    color: #fff
+    -webkit-box-shadow: inset 0 0 0 2px $flowactive-blue
+    box-shadow: inset 0 0 0 2px $flowactive-blue
+    -webkit-transition: all .15s ease $flowactive-red
+    transition: all .15s ease $flowactive-red
+    margin-top: 1.5em
+
 .btn-box
   display: flex
   align-items: center
@@ -148,7 +198,6 @@ $menu-item-active-color: $flowactive-blue-invert
 $menu-item-active-background-color:	$flowactive-blue-invert
 $menu-list-border-left: 1px solid $flowactive-blue-invert
 $menu-label-color: $white-ter
-
 
 .menu-label
   font-size: 1em !important
@@ -199,8 +248,18 @@ $menu-label-color: $white-ter
 .has-text-weight-bold
   font-family: $font-family-sans-serif
 
+
+
 @import "~bulma"
 
+.product-page-smalltitle
+  font-weight: 600 !important
+  letter-spacing: 0.1em
+
+.product-page-title
+  font-weight: 600 !important
+  font-family: 'Avenir', $font-family-menubar
+  letter-spacing: 0.01em
 
 .YTVideoEmbed
   width: 60%
@@ -215,6 +274,8 @@ $menu-label-color: $white-ter
   .YTVideoEmbed
     margin-left: 10%
     width: 80%
+  .product-image-container
+    width: 250px !important
 
 
 +mobile
@@ -233,3 +294,8 @@ $menu-label-color: $white-ter
   .YTVideoEmbed
     margin-left: 0%
     width: 100%
+  .product-image-container
+    width: 200px !important
+
+
+
