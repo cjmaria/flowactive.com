@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Leading Commercial Water Monitoring
-image: /img/LuxuryBathroom.jpg
+image: /img/LuxuryBathroomCropped.jpg
 subheading: Support sustainability while reducing your water bill
 mainpitch:
   title: Don't Just Pay the Bill
