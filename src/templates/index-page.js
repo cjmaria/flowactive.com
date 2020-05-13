@@ -38,38 +38,49 @@ export const IndexPageTemplate = ({
         }}
       >
         <div>
-        <div>
-          <h1
-            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen has-text-centered"
-            style={{
-              color: 'white',
-              lineHeight: '1',
-              padding: '0.25em',
-            }}
-          >
-            {title}
-          </h1>
-          <h3
-            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen has-text-centered"
-            style={{
-              color: 'white',
-              lineHeight: '1',
-              padding: '0.25em',
-            }}
-          >
-          {subheading}
-          </h3>
-        </div>
-        <div className="is-centered" style={{paddingTop:'1.2rem', paddingBottom:'1.2rem'}}>
-          <div className='is-centered has-text-centered'>
-            <Link className="btn-mainpage" style={{marginRight: '0.8rem'}} to="/products">
-            ⠀About Us⠀
-            </Link>
-            <Link className="btn-mainpage" style={{marginLeft: '0.8rem'}} to="/products">
-              Our Product
-            </Link>
+          <div>
+            <h1
+              className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen has-text-centered"
+              style={{
+                color: 'white',
+                lineHeight: '1',
+                padding: '0.25em',
+              }}
+            >
+              {title}
+            </h1>
+            <h3
+              className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen has-text-centered"
+              style={{
+                color: 'white',
+                lineHeight: '1',
+                padding: '0.25em',
+              }}
+            >
+              {subheading}
+            </h3>
           </div>
-        </div>
+          <div
+            className="is-centered"
+            style={{ paddingTop: '1.2rem', paddingBottom: '1.2rem' }}
+          >
+            <div className="is-centered has-text-centered">
+              <Link
+                className="btn-mainpage"
+                style={{ marginRight: '0.8rem' }}
+                to="/products"
+              >
+                ⠀About Us⠀
+              </Link>
+              <Link
+                className="btn-mainpage"
+                style={{ marginLeft: '0.8rem' }}
+                to="/products"
+              >
+                Our Product
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -85,11 +96,9 @@ export const IndexPageTemplate = ({
                   </div>
                   <div className="tile mainpitch-subtitle has-text-centered">
                     <h3 className="subtitle">{mainpitch.subtitle}</h3>
-
                   </div>
                   <div className="tile">
                     <p className="index-text">{mainpitch.description}</p>
-
                   </div>
                 </div>
                 <div className="columns">

@@ -9,7 +9,6 @@ import YouTubeVideo from '../components/YouTubeVideo'
 import ProductBar from '../components/ProductBar'
 import { Link } from 'gatsby'
 
-
 export const ProductPageTemplate = ({
   productimage,
   smalltitle,
@@ -25,107 +24,104 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <div className="content">
-      <div style={{
+    <div
+      style={{
         boxShadow:
-            '0.5rem 0 0 rgb(53, 120, 189), -0.5rem 0 0 rgb(53, 120, 189)',
+          '0.5rem 0 0 rgb(53, 120, 189), -0.5rem 0 0 rgb(53, 120, 189)',
         backgroundColor: '#fff',
       }}
+    >
+      <h2
+        className="product-page-smalltitle has-text-centered is-size-6"
+        style={{
+          color: '#4a4a4a',
+          paddingTop: '3rem',
+        }}
       >
-        <h2
-          className="product-page-smalltitle has-text-centered is-size-6"
+        {smalltitle}
+      </h2>
+      <h1
+        className="product-page-title has-text-centered is-size-1"
+        style={{
+          color: '#4a4a4a',
+          paddingTop: '1rem',
+          margin: 0,
+        }}
+      >
+        {title} <br />
+        {subtitle}
+      </h1>
+      <div className="btn-box is-12 has-text-centered">
+        <Link className="btn-product" to="/contact">
+          Contact Us
+        </Link>
+      </div>
+      <div className="has-text-centered">
+        <div
+          className="product-image-container"
           style={{
-            color: '#4a4a4a',
-            paddingTop: '3rem',
+            width: '300px',
+            display: 'inline-block',
+            paddingTop: '2em',
+            paddingBottom: '2em',
           }}
         >
-          {smalltitle}
-        </h2>
-        <h1
-          className="product-page-title has-text-centered is-size-1"
-          style={{
-            color: '#4a4a4a',
-            paddingTop: '1rem',
-            margin: 0,
-          }}
-        >
-          {title} <br/>
-          {subtitle}
-        </h1>
-        <div className="btn-box is-12 has-text-centered">
-                    <Link className="btn-product" to="/contact">
-                      Contact Us
-                    </Link>
-        </div>
-        <div className="has-text-centered">
-          <div className="product-image-container"
-            style={{
-              width: '300px',
-              display: 'inline-block',
-              paddingTop: '2em',
-              paddingBottom: '2em',
-            }}
-          >
-            <PreviewCompatibleImage imageInfo={productimage} />
-          </div>
-        
+          <PreviewCompatibleImage imageInfo={productimage} />
         </div>
       </div>
+    </div>
 
-      <ProductBar containerClass='productbar' />
+    <ProductBar containerClass="productbar" />
 
-      
-      <div className="container"  style={{ zIndex: '-1', position: 'relative' }}>
-        <div className="section">
-          <div className="columns" id="HowItWorks">
-            <div className="column is-full has-text-centered">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-              <p className="is-size-5">{description}</p>
-              <YouTubeVideo videoInfo={video}/>
-            </div>
+    <div className="container" style={{ zIndex: '-1', position: 'relative' }}>
+      <div className="section">
+        <div className="columns" id="HowItWorks">
+          <div className="column is-full has-text-centered">
+            <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
+            <p className="is-size-5">{description}</p>
+            <YouTubeVideo videoInfo={video} />
           </div>
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <ProductFeatures gridItems={intro.blurbs} />
-              <div className="columns">
-                <div className="column  has-text-centered" id="CustomerSuccess">
-                  <h1 className="has-text-weight-semibold is-size-1">
-                    {main.heading}
-                  </h1>
-                  <p>{main.description}</p>
-                </div>
+        </div>
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <ProductFeatures gridItems={intro.blurbs} />
+            <div className="columns">
+              <div className="column  has-text-centered" id="CustomerSuccess">
+                <h1 className="has-text-weight-semibold is-size-1">
+                  {main.heading}
+                </h1>
+                <p>{main.description}</p>
               </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image1} />
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <Testimonials testimonials={testimonials} />
-              <div className="tile is-ancestor" id="ReturnOnInvestment">
-                <div className="tile is-vertical">
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image2} />
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <h2 className="has-text-weight-semibold is-size-2">
-                {pricing.heading}
-              </h2>
-              <p className="is-size-5">{pricing.description}</p>
             </div>
+            <div className="tile is-ancestor">
+              <div className="tile is-vertical">
+                <div className="tile is-parent">
+                  <article className="tile is-child">
+                    <PreviewCompatibleImage imageInfo={main.image1} />
+                  </article>
+                </div>
+              </div>
+            </div>
+            <Testimonials testimonials={testimonials} />
+            <div className="tile is-ancestor" id="ReturnOnInvestment">
+              <div className="tile is-vertical">
+                <div className="tile is-parent">
+                  <article className="tile is-child">
+                    <PreviewCompatibleImage imageInfo={main.image2} />
+                  </article>
+                </div>
+              </div>
+            </div>
+            <h2 className="has-text-weight-semibold is-size-2">
+              {pricing.heading}
+            </h2>
+            <p className="is-size-5">{pricing.description}</p>
           </div>
         </div>
       </div>
-
+    </div>
   </div>
 )
-
-
 
 ProductPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

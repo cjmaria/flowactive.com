@@ -10,7 +10,7 @@ const Productbar = class extends React.Component {
       containerClass: this.props.containerClass,
       position: 'relative',
       top: null,
-      scrollPadding: '0vh'
+      scrollPadding: '0vh',
     }
     this.barRef = React.createRef()
   }
@@ -24,19 +24,19 @@ const Productbar = class extends React.Component {
   }
 
   handleScroll = () => {
-    let isMobile = (window.innerWidth <= 1024)
-    if ((window.scrollY >= 537.391 + 0.1 * window.innerHeight) && !isMobile) {
+    let isMobile = window.innerWidth <= 1024
+    if (window.scrollY >= 537.391 + 0.1 * window.innerHeight && !isMobile) {
       const fixedState = {
         top: 0,
         position: 'fixed',
-        scrollPadding: '6.2rem'
+        scrollPadding: '6.2rem',
       }
       this.setState(fixedState)
     } else {
       const relativeState = {
         top: null,
         position: 'relative',
-        scrollPadding: '0vh'
+        scrollPadding: '0vh',
       }
       this.setState(relativeState)
     }
@@ -45,31 +45,37 @@ const Productbar = class extends React.Component {
   render() {
     return (
       <div>
-      <nav className={this.state.containerClass} role="navigation" aria-label="main-navigation" style={{position: this.state.position, top: this.state.top}}>
-        <div className="container" onScroll={this.handleScroll}>
-
-          <div
-            id="navMenu"
-            className={`productbar-menu ${this.state.navBarActiveClass}`}
-            
-          >
-            <div className="navbar-start has-text-centered" style={{justifyContent: 'center'}}>
-              <Link className="navbar-item" to="/products#HowItWorks">
-                How It Works
-              </Link>
-              <Link className="navbar-item" to="/products#CustomerSuccess">
-                Customer Successes
-              </Link>
-              <Link className="navbar-item" to="/products#ReturnOnInvestment">
-                Return on Investment
-              </Link>
+        <nav
+          className={this.state.containerClass}
+          role="navigation"
+          aria-label="main-navigation"
+          style={{ position: this.state.position, top: this.state.top }}
+        >
+          <div className="container" onScroll={this.handleScroll}>
+            <div
+              id="navMenu"
+              className={`productbar-menu ${this.state.navBarActiveClass}`}
+            >
+              <div
+                className="navbar-start has-text-centered"
+                style={{ justifyContent: 'center' }}
+              >
+                <Link className="navbar-item" to="/products#HowItWorks">
+                  How It Works
+                </Link>
+                <Link className="navbar-item" to="/products#CustomerSuccess">
+                  Customer Successes
+                </Link>
+                <Link className="navbar-item" to="/products#ReturnOnInvestment">
+                  Return on Investment
+                </Link>
+              </div>
             </div>
-            
           </div>
-        </div>
-
-      </nav>
-      <div style={{display: 'inline-block', height: this.state.scrollPadding}} />
+        </nav>
+        <div
+          style={{ display: 'inline-block', height: this.state.scrollPadding }}
+        />
       </div>
     )
   }

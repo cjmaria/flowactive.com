@@ -6,9 +6,7 @@ const Testimonials = ({ testimonials }) => (
   <div>
     {testimonials.map((testimonial) => (
       <article key={v4()} className="message">
-        <div className="message-body is-size-5">
-          {testimonial.quote}
-        </div>
+        <div className="message-body is-size-5">{testimonial.quote}</div>
       </article>
     ))}
   </div>

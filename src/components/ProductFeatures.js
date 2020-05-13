@@ -4,7 +4,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const ProductFeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline is-centered">
-    {gridItems.map(item => (
+    {gridItems.map((item) => (
       <div key={item.text} className="column is-6">
         <section className="section">
           <div className="has-text-centered">
@@ -13,8 +13,8 @@ const ProductFeatureGrid = ({ gridItems }) => (
                 width: '90%',
                 display: 'inline-block',
                 justifyContent: 'center',
-                boxShadow:'0px 0px 4px #333',
-                borderRadius: '5px'
+                boxShadow: '0px 0px 4px #333',
+                borderRadius: '5px',
               }}
             >
               <PreviewCompatibleImage imageInfo={item} />
