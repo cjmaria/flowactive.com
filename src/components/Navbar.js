@@ -79,7 +79,7 @@ const Navbar = class extends React.Component {
               <div className="btn-box is-12 has-text-centered">
                 <a
                   className="btn-navbar"
-                  href="https://panel.mobius-labs.com/login/login.php"
+                  href="https://beta.dashboard.mobius-labs.com/"
                 >
                   Log In
                 </a>

@@ -14,6 +14,7 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  collaboratorsImage,
 }) => (
   <div>
     <div
@@ -68,7 +69,7 @@ export const IndexPageTemplate = ({
               <Link
                 className="btn-mainpage"
                 style={{ marginRight: '0.8rem' }}
-                to="/products"
+                to="/about"
               >
                 ⠀About Us⠀
               </Link>
@@ -128,6 +129,26 @@ export const IndexPageTemplate = ({
                     </Link>
                   </div>
                 </div>
+
+                <h3 className="has-text-weight-semibold is-size-2">
+                  Collaborators
+                </h3>
+                <div style={{ width: '100%' }}>
+                  <div
+                    style={{
+                      width: '100%',
+                      height: '0',
+                      backgroundRepeat: 'no-repeat',
+                      paddingTop: '29.507%',
+                      backgroundSize: 'contain',
+                      backgroundImage: `url(${
+                        !!collaboratorsImage.childImageSharp
+                          ? collaboratorsImage.childImageSharp.fluid.src
+                          : collaboratorsImage
+                      })`,
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -148,9 +169,7 @@ IndexPageTemplate.propTypes = {
     subtitle: PropTypes.string,
     blurbs: PropTypes.array,
   }),
-  collaborators: PropTypes.shape({
-    logos: PropTypes.array,
-  }),
+  collaboratorsImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 
 const IndexPage = ({ data }) => {
@@ -166,7 +185,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
-        collaborators={frontmatter.collaborators}
+        collaboratorsImage={frontmatter.collaboratorsImage}
       />
     </Layout>
   )
@@ -217,6 +236,13 @@ export const pageQuery = graphql`
           }
           heading
           description
+        }
+        collaboratorsImage {
+          childImageSharp {
+            fluid(maxWidth: 1280, quality: 40) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }

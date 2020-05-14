@@ -44,14 +44,6 @@ intro:
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
 
-collaborators:
-  logos:
-    - image: /img/collaboratorLogos/Schahet.jpg
-    - image: /img/collaboratorLogos/ATT.png
-    - image: /img/collaboratorLogos/HiltonGardenInn.jpg
-    - image: /img/collaboratorLogos/Marriott.jpg
-    - image: /img/collaboratorLogos/DeepBlue.jpg
-    - image: /img/collaboratorLogos/BBL.png
-    - image: /img/collaboratorLogos/ColumbiaSussex.jpg
+collaboratorsImage: /img/Collaborators.png
 
 ---
