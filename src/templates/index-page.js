@@ -9,10 +9,8 @@ import BlogRoll from '../components/BlogRoll'
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
   subheading,
   mainpitch,
-  description,
   intro,
   collaboratorsImage,
 }) => (
@@ -183,7 +181,6 @@ const IndexPage = ({ data }) => {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
         intro={frontmatter.intro}
         collaboratorsImage={frontmatter.collaboratorsImage}
       />
@@ -234,12 +231,10 @@ export const pageQuery = graphql`
             heading
             text
           }
-          heading
-          description
         }
         collaboratorsImage {
           childImageSharp {
-            fluid(maxWidth: 1280, quality: 40) {
+            fluid(maxWidth: 1280, quality: 30) {
               ...GatsbyImageSharpFluid
             }
           }
