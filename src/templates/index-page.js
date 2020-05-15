@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({
           justifyContent: 'space-around',
           alignItems: 'left',
           flexDirection: 'column',
-          backgroundColor: 'rgba(53, 46, 45, 0.75)',
+          backgroundColor: 'rgba(53, 46, 45, 0.4)',
           padding: '0.8rem',
           backdropFilter: 'blur(4px)',
           borderRadius: '0.5rem',
@@ -45,7 +45,7 @@ export const IndexPageTemplate = ({
               style={{
                 color: 'white',
                 lineHeight: '1',
-                padding: '0.25em',
+                padding: '0.2rem',
               }}
             >
               {title}

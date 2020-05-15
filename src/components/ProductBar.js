@@ -25,7 +25,7 @@ const Productbar = class extends React.Component {
 
   handleScroll = () => {
     let isMobile = window.innerWidth <= 1024
-    if (window.scrollY >= 537.391 + 0.1 * window.innerHeight && !isMobile) {
+    if (window.scrollY >= 537.391 + 0.08 * window.innerHeight && !isMobile) {
       const fixedState = {
         top: 0,
         position: 'fixed',

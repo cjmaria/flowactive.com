@@ -41,7 +41,7 @@ export const ProductPageTemplate = ({
         {smalltitle}
       </h2>
       <h1
-        className="product-page-title has-text-centered is-size-1"
+        className="product-page-title has-text-centered is-size-2"
         style={{
           color: '#4a4a4a',
           paddingTop: '1rem',

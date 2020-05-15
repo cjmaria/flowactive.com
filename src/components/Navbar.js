@@ -81,7 +81,7 @@ const Navbar = class extends React.Component {
                   className="btn-navbar"
                   href="https://beta.dashboard.mobius-labs.com/"
                 >
-                  Log In
+                  Sign In
                 </a>
               </div>
             </div>
