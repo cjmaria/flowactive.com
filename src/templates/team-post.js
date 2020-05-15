@@ -93,10 +93,20 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
+        name
         role
         ordering
-        title
-        description
+        iscoreteam
+        isboardmember
+        isadvisor
+        oneliner
+        headshotimage {
+          childImageSharp {
+            fluid(maxWidth: 512, quality: 30) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         tags
       }
     }
