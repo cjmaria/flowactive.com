@@ -51,7 +51,7 @@ const Productbar = class extends React.Component {
         >
           <div className="container" onScroll={this.handleScroll}>
             <div
-              id="navMenu"
+              id="productMenu"
               className={`productbar-menu ${this.state.navBarActiveClass}`}
             >
               <div

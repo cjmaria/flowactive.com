@@ -51,7 +51,7 @@ const CompanyBar = class extends React.Component {
         >
           <div onScroll={this.handleScroll}>
             <div
-              id="navMenu"
+              id="companyMenu"
               className={`companybar-menu ${this.state.navBarActiveClass}`}
             >
               <div

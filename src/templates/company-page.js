@@ -34,25 +34,13 @@ export const CompanyPageTemplate = ({
             <div className="columns is-centered">
               <div className="column is-three-fifths has-text-centered">
                 <p
-                  className="is-size-2-mobile is-size-1-tablet is-size-1-widescreen"
-                  style={{
-                    color: '#fff',
-                    fontFamily: 'Source Sans Pro',
-                    fontWeight: '600',
-                    lineHeight: '1',
-                  }}
+                  className="has-text-weight-semibold has-text-white is-size-2-mobile is-size-1-tablet is-size-1-widescreen"
                 >
                   {missionHeading}
                 </p>
                 <br/>
                 <p
-                  className="is-size-6-mobile is-size-6-tablet is-size-4-widescreen"
-                  style={{
-                    color: '#fff',
-                    fontFamily: 'Source Sans Pro',
-                    fontSize: '1.2rem',
-                    fontWeight: '500',
-                  }}
+                  className="has-text-white is-size-6-mobile is-size-6-tablet is-size-4-widescreen"
                 >
                   {missionSubheading}
                 </p>

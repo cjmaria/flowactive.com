@@ -109,7 +109,7 @@ export const IndexPageTemplate = ({
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn-product" to="/products">
-                      Learn More
+                      See Product Details
                     </Link>
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export const IndexPageTemplate = ({
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn-product" to="/blog">
-                      Read more
+                      Read more posts
                     </Link>
                   </div>
                 </div>

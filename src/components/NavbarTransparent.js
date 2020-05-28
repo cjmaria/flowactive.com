@@ -56,6 +56,7 @@ const NavbarTransparent = class extends React.Component {
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
               onKeyDown={() => this.toggleHamburger()}
+              aria-label="navigation menu"
             >
               <span />
               <span />
@@ -63,7 +64,7 @@ const NavbarTransparent = class extends React.Component {
             </button>
           </div>
           <div
-            id="navMenu"
+            id="mobileNavMenu"net
             className={`navbar-transparent-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered is-centered">
