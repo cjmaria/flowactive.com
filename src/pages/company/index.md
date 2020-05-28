@@ -1,5 +1,5 @@
 ---
-templateKey: 'about-page'
+templateKey: 'company-page'
 path: /company/about-us
 missionStatement:
   backgroundImage: /img/DarkOceanBackground2.jpg

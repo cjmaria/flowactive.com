@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import TransparentLayout from '../components/TransparentLayout'
 import Content, { HTMLContent } from '../components/Content'
-import CompanyHeader from '../components/CompanyHeader'
+import CompanyBar from '../components/CompanyBar'
 
-export const AboutPageTemplate = ({
+
+
+export const CompanyPageTemplate = ({
   title,
   content,
   missionImage,
@@ -17,13 +19,50 @@ export const AboutPageTemplate = ({
 
   return (
     <div>
-      <CompanyHeader
-        containerClass="companyheader"
-        heading={missionHeading}
-        subheading={missionSubheading}
-        backgroundImage={missionImage}
-      />
-      <section className="section section--gradient">
+      <div>
+        <div
+          className="full-width-image margin-top-0"
+          style={{
+            backgroundImage: `url(${
+              !!missionImage.childImageSharp
+                ? missionImage.childImageSharp.fluid.src
+                : missionImage.childImageSharp
+            })`,
+          }}
+        >
+          <div className="section" style={{ width: '100%' }}>
+            <div className="columns is-centered">
+              <div className="column is-three-fifths has-text-centered">
+                <p
+                  className="is-size-2-mobile is-size-1-tablet is-size-1-widescreen"
+                  style={{
+                    color: '#fff',
+                    fontFamily: 'Source Sans Pro',
+                    fontWeight: '600',
+                    lineHeight: '1',
+                  }}
+                >
+                  {missionHeading}
+                </p>
+                <br/>
+                <p
+                  className="is-size-6-mobile is-size-6-tablet is-size-4-widescreen"
+                  style={{
+                    color: '#fff',
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: '1.2rem',
+                    fontWeight: '500',
+                  }}
+                >
+                  {missionSubheading}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <CompanyBar />
+      <section className="section section--gradient" style={{zIndex: '-1', position: 'relative'}}>
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
@@ -41,7 +80,7 @@ export const AboutPageTemplate = ({
   )
 }
 
-AboutPageTemplate.propTypes = {
+CompanyPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   missionImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   missionHeading: PropTypes.string,
@@ -50,12 +89,12 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const CompanyPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <TransparentLayout>
-      <AboutPageTemplate
+      <CompanyPageTemplate
         contentComponent={HTMLContent}
         missionImage={post.frontmatter.missionStatement.backgroundImage}
         missionHeading={post.frontmatter.missionStatement.heading}
@@ -67,14 +106,14 @@ const AboutPage = ({ data }) => {
   )
 }
 
-AboutPage.propTypes = {
+CompanyPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default CompanyPage
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const companyPageQuery = graphql`
+  query CompanyPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

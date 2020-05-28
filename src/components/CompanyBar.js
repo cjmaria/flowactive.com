@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const CompanyHeader = class extends React.Component {
+const CompanyBar = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -11,11 +11,7 @@ const CompanyHeader = class extends React.Component {
       position: 'relative',
       top: null,
       scrollPadding: '0vh',
-      heading: this.props.heading,
-      subheading: this.props.subheading,
-      backgroundImage: this.props.backgroundImage,
     }
-    this.barRef = React.createRef()
   }
 
   componentDidMount() {
@@ -46,57 +42,17 @@ const CompanyHeader = class extends React.Component {
 
   render() {
     return (
-      <div>
-        <div
-          className="full-width-image margin-top-0"
-          style={{
-            backgroundImage: `url(${
-              !!this.state.backgroundImage.childImageSharp
-                ? this.state.backgroundImage.childImageSharp.fluid.src
-                : this.state.backgroundImage
-            })`,
-          }}
-        >
-          <div className="section" style={{ width: '100%' }}>
-            <div className="columns is-centered">
-              <div className="column is-three-fifths has-text-centered">
-                <p
-                  className="is-size-2-mobile is-size-1-tablet is-size-1-widescreen"
-                  style={{
-                    color: '#fff',
-                    fontFamily: 'Source Sans Pro',
-                    fontWeight: '600',
-                    lineHeight: '1',
-                  }}
-                >
-                  {this.state.heading}
-                </p>
-                <br/>
-                <p
-                  className="is-size-6-mobile is-size-6-tablet is-size-4-widescreen"
-                  style={{
-                    color: '#fff',
-                    fontFamily: 'Source Sans Pro',
-                    fontSize: '1.2rem',
-                    fontWeight: '500',
-                  }}
-                >
-                  {this.state.subheading}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="companybar">
         <nav
           className={this.state.containerClass}
           role="navigation"
           aria-label="main-navigation"
           style={{ position: this.state.position, top: this.state.top }}
         >
-          <div className="container" onScroll={this.handleScroll}>
+          <div onScroll={this.handleScroll}>
             <div
               id="navMenu"
-              className={`companyheader-menu ${this.state.navBarActiveClass}`}
+              className={`companybar-menu ${this.state.navBarActiveClass}`}
             >
               <div
                 className="navbar-start has-text-centered"
@@ -123,4 +79,4 @@ const CompanyHeader = class extends React.Component {
   }
 }
 
-export default CompanyHeader
+export default CompanyBar

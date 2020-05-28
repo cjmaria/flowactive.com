@@ -29,7 +29,7 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
 
 // Company Page Styling
 
-.companyheader-menu .navbar-start .navbar-item
+.companybar-menu .navbar-start .navbar-item
   color: #fff !important
   margin-left: 1rem 
   &:hover
@@ -37,15 +37,12 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
     border-radius: 0.36rem
     box-shadow: 0px 0px 5px #1F4871
 
-.companyheader .companyheader-menu
+.companybar-menu
   font-family: $font-family-menubar
   font-size: 1.2em
   font-weight: 500
   min-height: 5rem
   padding-top: 1.2rem
-  background-color: $flowactive-dark-blue !important
-
-.companyheader
   background-color: $flowactive-dark-blue !important
   box-shadow: 0px 0px 7px #333
   width: 100vw
@@ -122,7 +119,9 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
     color: #000 !important
     background-color: #ffffff00
 
-.navbar-end 
+.navbar-burger
+  background-color: #ffffff00 !important
+  border-color: #ffffff00 !important
 
 
 
@@ -368,6 +367,8 @@ $menu-label-color: $white-ter
   width: 60%
   margin-left: 20%
   position: relative
+
+
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
@@ -387,8 +388,6 @@ $menu-label-color: $white-ter
     display: none
   .white-navbar-container
     display: block
-  .navbar-burger
-    margin-right: 2rem
 
 
 +mobile

@@ -12,7 +12,6 @@ const Productbar = class extends React.Component {
       top: null,
       scrollPadding: '0vh',
     }
-    this.barRef = React.createRef()
   }
 
   componentDidMount() {

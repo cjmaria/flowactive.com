@@ -3,14 +3,12 @@ import Layout from '../../../components/Layout'
 import CoreTeamRoll from '../../../components/CoreTeamRoll'
 import BoardMemberRoll from '../../../components/BoardMemberRoll'
 import AdvisorRoll from '../../../components/AdvisorRoll'
-import CompanyHeader from '../../../components/CompanyHeader'
 
 export default class TeamIndexPage extends React.Component {
   render() {
     return (
       <Layout>
         <div className="team-page-conatiner">
-          <CompanyHeader containerClass="companyheader" />
           <section className="section">
             <div className="margin-top-0">
               <h1

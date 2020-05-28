@@ -60,10 +60,10 @@ collections:
           - {label: Intro, name: intro, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: string}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Image Heading, name: heading, widget: string}, {label: Image Subtext, name: text, widget: text}]}]}
           - {label: CollaboratorsImage, name: collaboratorsImage, widget: image}
       - file: "src/pages/company/index.md"
-        label: "About"
-        name: "about"
+        label: "Company"
+        name: "company"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "company-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/products/index.md"
