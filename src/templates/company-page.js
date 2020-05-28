@@ -109,7 +109,7 @@ export const companyPageQuery = graphql`
           backgroundImage {
             childImageSharp {
               fluid(maxWidth: 2048, quality: 60) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

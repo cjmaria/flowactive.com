@@ -195,20 +195,13 @@ export const productPageQuery = graphql`
         productimage {
           childImageSharp {
             fluid(maxWidth: 256, quality: 50) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         videoInfo {
           ytid
           alttext
-        }
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
         }
         heading
         description
@@ -217,15 +210,13 @@ export const productPageQuery = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
             heading
             text
           }
-          heading
-          description
         }
         main {
           heading
@@ -234,8 +225,8 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 800, quality: 70) {
-                  ...GatsbyImageSharpFluid
+                fluid(maxWidth: 800, quality: 60) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
@@ -244,8 +235,8 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 800, quality: 70) {
-                  ...GatsbyImageSharpFluid
+                fluid(maxWidth: 800, quality: 60) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }

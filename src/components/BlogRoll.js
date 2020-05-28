@@ -89,7 +89,7 @@ export default () => (
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 20) {
-                      ...GatsbyImageSharpFluid
+                      ...GatsbyImageSharpFluid_withWebp
                     }
                   }
                 }

@@ -68,7 +68,7 @@ export default () => (
                 headshotimage {
                   childImageSharp {
                     fluid(maxWidth: 200, quality: 20) {
-                      ...GatsbyImageSharpFluid
+                      ...GatsbyImageSharpFluid_withWebp
                     }
                   }
                 }

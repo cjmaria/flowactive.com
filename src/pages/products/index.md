@@ -8,7 +8,6 @@ productimage: /img/BlockBlue.png
 videoInfo:
   ytid: eJ6nJnFMIqk
   alttext: FirstDrops Install Video
-image: /img/jumbotron.jpg
 heading: 'Transform your water system in three simple steps'
 description: >-
   FirstDrops lets you turn your current plumbing system into a smart water 
@@ -34,13 +33,6 @@ intro:
       text: >
         Log on to your portal and get real-time data on the water being used in your 
         building. Get notified of unusual usage and see problems before they happen.
-
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
 main:
   heading: Customer Successes
   description: >

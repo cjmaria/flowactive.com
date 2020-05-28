@@ -103,7 +103,7 @@ export const pageQuery = graphql`
         headshotimage {
           childImageSharp {
             fluid(maxWidth: 512, quality: 30) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
