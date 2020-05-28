@@ -17,8 +17,114 @@ $body-color: #333
 $white: #efeef1
 $info: #fff
 
-$font-family-sans-serif: "Trebuchet MS", "Roboto", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$size-1: 4rem
+$size-2: 2.8rem
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+$font-family-sans-serif: "Source Sans Pro", "Trebuchet MS", "Roboto", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+
+// Company Page Styling
+
+.companyheader-menu .navbar-start .navbar-item
+  color: #fff !important
+  margin-left: 1rem 
+  &:hover
+    background-color: #2f6caa !important
+    border-radius: 0.36rem
+    box-shadow: 0px 0px 5px #1F4871
+
+.companyheader .companyheader-menu
+  font-family: $font-family-menubar
+  font-size: 1.2em
+  font-weight: 500
+  min-height: 5rem
+  padding-top: 1.2rem
+  background-color: $flowactive-dark-blue !important
+
+.companyheader
+  background-color: $flowactive-dark-blue !important
+  box-shadow: 0px 0px 7px #333
+  width: 100vw
+  z-index: 10
+
+// Transparent Navbar styling
+
+.transparent-navbar-container
+  display: block
+.white-navbar-container
+  display: none
+
+.navbar-transparent .navbar-transparent-menu
+  font-family: $font-family-menubar
+  font-size: 1.1rem
+  font-weight: 500
+  color: rgb(254, 254, 254)
+  min-height: 8vh
+  background-color: #ffffff00 !important
+  display: flex
+  width: 100%
+
+.navbar-transparent
+  background-color: #ffffff00 !important
+  position: absolute !important
+  width: 100vw
+  position: absolute
+
+.navbar-transparent .container
+  display: flex
+
+
+.btn-navbar-transparent
+    padding: 12px 16px 10px
+    font-size: 1rem
+    line-height: 1.25
+    background-color: #ffffff00
+    border-radius: .36rem
+    text-decoration: none
+    font-weight: 700
+    color: #fff
+    -webkit-box-shadow: inset 0 0 0 2px #fff
+    box-shadow: inset 0 0 0 2px #fff
+    -webkit-transition: all .15s ease $flowactive-red
+    transition: all .15s ease $flowactive-red
+
+
+.navbar-transparent-menu .navbar-item
+  color: rgb(254, 254, 254) !important
+  &:hover
+    color: #fff !important
+    font-weight: 700 !important
+    background-color: #ffffff00
+
+// Regular Navbar
+.navbar .navbar-menu
+  font-family: $font-family-menubar
+  font-size: 1.1rem
+  font-weight: 500
+  color: #333
+  min-height: 8vh
+  background-color: #fff !important
+
+.navbar
+  background-color: #fff !important
+  box-shadow: 0px 0px 7px #333
+  position: relative
+  width: 100vw
+  display: flex
+
+.navbar-menu .navbar-item
+  color: #333 !important
+  &:hover
+    color: #000 !important
+    background-color: #ffffff00
+
+.navbar-end 
+
+
 
 .index-text
   font-family: $font-family-sans-serif
@@ -55,17 +161,7 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
 .title
   font-family: $font-family-sans-serif
 
-.navbar .navbar-menu
-  font-family: $font-family-menubar
-  font-size: 1.1rem
-  font-weight: 500
-  color: #333
-  min-height: 8vh
-  background-color: #fff !important
 
-.navbar
-  background-color: #fff !important
-  box-shadow: 0px 0px 7px #333
 
 .productbar .productbar-menu
   font-family: $font-family-menubar
@@ -80,25 +176,6 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
   box-shadow: 0px 0px 7px #333
   width: 100vw
   z-index: 10;
-
-.hidden-product-bar
-  background-color: $flowactive-blue !important
-  box-shadow: 0px 0px 7px #333
-  width: 100vw
-
-.hidden-product-bar .productbar-menu
-  font-family: $font-family-menubar
-  font-size: 1.2em
-  font-weight: 500
-  min-height: 5rem
-  padding-top: 1.2rem
-  background-color: $flowactive-blue !important
-
-.navbar-menu .navbar-item
-  color: #333 !important
-  &:hover
-    color: #000 !important
-    background-color: #fff
 
 .productbar-menu .navbar-start .navbar-item
   color: #fff !important
@@ -136,7 +213,7 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
   margin: 2em -50vw
 
 .full-width-image
-    width: 100vw
+    width: 100%
     height: 72vh
     background-size: cover
     background-position: center
@@ -186,6 +263,9 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
     box-shadow: 1px 1px 0.4rem rgb(53, 46, 45)
     margin-top: 0rem
     margin-bottom: 0rem
+    white-space: nowrap
+
+
     
 .btn-box
   display: flex
@@ -299,6 +379,16 @@ $menu-label-color: $white-ter
     width: 80%
   .product-image-container
     width: 250px !important
+  .navbar-transparent .navbar-brand
+    width: 100%
+  html, body 
+    width: 100%
+  .transparent-navbar-container
+    display: none
+  .white-navbar-container
+    display: block
+  .navbar-burger
+    margin-right: 2rem
 
 
 +mobile
@@ -319,7 +409,14 @@ $menu-label-color: $white-ter
     width: 100%
   .product-image-container
     width: 200px !important
-
-
-
+  .btn-mainpage-column
+    padding-bottom: 1.2rem
+  .navbar-transparent .navbar-brand
+    width: 100%
+  html, body 
+    width: 100%
+  .transparent-navbar-container
+    display: none
+  .white-navbar-container
+    display: block
 

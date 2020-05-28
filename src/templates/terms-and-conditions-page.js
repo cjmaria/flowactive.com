@@ -4,7 +4,13 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const TermsPageTemplate = ({ title, termsOfServiceLink, termsOfPurchaseLink, content, contentComponent }) => {
+export const TermsPageTemplate = ({
+  title,
+  termsOfServiceLink,
+  termsOfPurchaseLink,
+  content,
+  contentComponent,
+}) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -19,10 +25,26 @@ export const TermsPageTemplate = ({ title, termsOfServiceLink, termsOfPurchaseLi
               <PageContent className="content" content={content} />
               <div className="columns is-centered">
                 <div className="btn-box is-12">
-                  <a target="_blank" rel="noopener noreferrer" href={termsOfServiceLink} className="btn-product"> Terms of Service </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={termsOfServiceLink}
+                    className="btn-product"
+                  >
+                    {' '}
+                    Terms of Service{' '}
+                  </a>
                 </div>
-                <div className="btn-box is-12" style={{marginLeft: '1rem'}}>
-                  <a target="_blank" rel="noopener noreferrer" href={termsOfPurchaseLink} className="btn-product"> Terms of Purchase </a>
+                <div className="btn-box is-12" style={{ marginLeft: '1rem' }}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={termsOfPurchaseLink}
+                    className="btn-product"
+                  >
+                    {' '}
+                    Terms of Purchase{' '}
+                  </a>
                 </div>
               </div>
             </div>
@@ -66,9 +88,9 @@ export const termsPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title,
-        termsOfServiceLink,
-        termsOfPurchaseLink,
+        title
+        termsOfServiceLink
+        termsOfPurchaseLink
       }
     }
   }

@@ -32,6 +32,7 @@ export const IndexPageTemplate = ({
           flexDirection: 'column',
           backgroundColor: 'rgba(53, 46, 45, 0.4)',
           padding: '0.8rem',
+          WebkitBackdropFilter: 'blur(4px)',
           backdropFilter: 'blur(4px)',
           borderRadius: '0.5rem',
         }}
@@ -39,7 +40,7 @@ export const IndexPageTemplate = ({
         <div>
           <div>
             <h1
-              className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen has-text-centered"
+              className="has-text-weight-semibold is-size-3-mobile is-size-2-tablet is-size-1-widescreen has-text-centered"
               style={{
                 color: 'white',
                 lineHeight: '1',
@@ -49,7 +50,7 @@ export const IndexPageTemplate = ({
               {title}
             </h1>
             <h3
-              className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen has-text-centered"
+              className="has-text-weight-semibold is-size-5-mobile is-size-5-tablet is-size-4-widescreen has-text-centered"
               style={{
                 color: 'white',
                 lineHeight: '1',
@@ -63,21 +64,17 @@ export const IndexPageTemplate = ({
             className="is-centered"
             style={{ paddingTop: '1.2rem', paddingBottom: '1.2rem' }}
           >
-            <div className="is-centered has-text-centered">
-              <Link
-                className="btn-mainpage"
-                style={{ marginRight: '0.8rem' }}
-                to="/about"
-              >
-                ⠀About Us⠀
-              </Link>
-              <Link
-                className="btn-mainpage"
-                style={{ marginLeft: '0.8rem' }}
-                to="/products"
-              >
-                Our Product
-              </Link>
+            <div className="columns is-centered has-text-centered">
+              <div className="column btn-mainpage-column is-one-fifth">
+                <Link className="btn-mainpage" to="/company">
+                  ⠀About Us⠀
+                </Link>
+              </div>
+              <div className="column btn-mainpage-column is-one-fifth">
+                <Link className="btn-mainpage" to="/products">
+                  Our Product
+                </Link>
+              </div>
             </div>
           </div>
         </div>
