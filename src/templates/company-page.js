@@ -63,7 +63,6 @@ export const CompanyPageTemplate = ({
           </div>
         </div>
       </div>
-      <CompanyBar />
       <section className="section section--gradient" style={{zIndex: '-1', position: 'relative'}}>
         <div className="container">
           <div className="columns">
@@ -115,28 +114,21 @@ export const CompanyPageTemplate = ({
                     </div>
                   </div>
                   
-                  <div className="column is-full has-text-centered " style={{paddingTop: '5rem'}}>
-                    <p className="is-size-3-mobile is-size-3-tablet is-size-2-widescreen has-text-weight-bold is-bold-light">
+                  <div className="column is-half has-text-centered " style={{paddingTop: '7rem'}}>
+                    <p className="is-size-3-mobile is-size-3-tablet is-size-3-widescreen has-text-weight-bold is-bold-light">
                       {aboutUsLocationHeading}
                     </p>
-                    <div style={{paddingLeft: '32%', paddingRight: '32%'}}>
-                      <PreviewCompatibleImage imageInfo={aboutUsLocationImage1} />
-                    </div>
-                  </div>
-                  <div className="column is-half  has-text-centered">
-                    <div style={{paddingLeft: '4%', paddingRight: '4%'}}>
-                      <PreviewCompatibleImage imageInfo={aboutUsLocationImage2} />
-                    </div>
-                    <br />
-                    <p className="is-size-3-mobile is-size-3-tablet is-size-3-widescreen has-text-weight-bold is-bold-light">
-                    {aboutUsAddress}
+                    <p className="is-size-3-mobile is-size-3-tablet is-size-3-widescreen " style={{paddingTop: '0.5rem', paddingBottom: '1rem'}}>
+                      {aboutUsAddress}
                     </p>
+                    <PreviewCompatibleImage imageInfo={aboutUsLocationImage2} />
                   </div>
-                  <div className="column is-half">
-                    <div style={{paddingLeft: '4%', paddingRight: '4%'}}>
-                      <PreviewCompatibleImage imageInfo={aboutUsLocationImage3} />
-                    </div>
+                  <div className="column is-half has-text-centered " style={{paddingTop: '7rem'}}>
+                    <iframe width="500" height="550" frameborder="0" style={{border: '0'}}
+                      src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz9Svc6gP3okReatCJ8lo90M&key=AIzaSyBBKJtqXSKlPlywdj_TgmD91iiFZPpcXm4" allowfullscreen>
+                    </iframe>
                   </div>
+
                 </div>                
               </div>
             </div>

@@ -20,7 +20,7 @@ aboutUs:
   locationImage1: /img/TroyNYLogo.png
   locationImage2: /img/FrearBuilding.jpg
   locationImage3: /img/TroyMap.jpg
-  address: 2 Third Street, Troy, NY 12180
+  address: 2 3rd, Suite 370, Troy, NY 12180
 
 
 
