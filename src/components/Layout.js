@@ -14,7 +14,8 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin></link>
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com/"></link>
         <link
           rel="apple-touch-icon"
           sizes="180x180"

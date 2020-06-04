@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'FlowActive',
-    description: 'FlowActive Inc. Website',
+    title: 'FlowActive: Water Monitoring & Leak Detection Technology',
+    description: 'FlowActive helps hotels and property managers lower water costs. Learn about our industry-leading sensor technology and fix problems before they happen.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

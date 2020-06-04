@@ -61,10 +61,10 @@ const CompanyBar = class extends React.Component {
                 <Link className="navbar-item" to="/company">
                   About Us
                 </Link>
-                <Link className="navbar-item" to="/company/team">
+                <Link className="navbar-item" to="/">
                   Our Team
                 </Link>
-                <Link className="navbar-item" to="/company/careers">
+                <Link className="navbar-item" to="/">
                   Careers
                 </Link>
               </div>
