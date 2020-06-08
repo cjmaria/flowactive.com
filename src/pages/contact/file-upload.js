@@ -56,11 +56,11 @@ export default class Contact extends React.Component {
                 onSubmit={this.handleSubmit}
               >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="file-upload" />
+                <input type="hidden" aria-label="submit form" name="form-name" value="file-upload" />
                 <div hidden>
                   <label>
                     Don’t fill this out:{' '}
-                    <input name="bot-field" onChange={this.handleChange} />
+                    <input name="bot-field" aria-label="bot form" onChange={this.handleChange} />
                   </label>
                 </div>
                 <div className="field">
@@ -70,6 +70,7 @@ export default class Contact extends React.Component {
                   <div className="control">
                     <input
                       className="input"
+                      aria-label="name input"
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
@@ -83,6 +84,7 @@ export default class Contact extends React.Component {
                     <label className="file-label">
                       <input
                         className="file-input"
+                        aria-label="file submission input"
                         type="file"
                         name="attachment"
                         onChange={this.handleAttachment}

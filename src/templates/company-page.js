@@ -133,7 +133,7 @@ export const CompanyPageTemplate = ({
                     </div>
                     <div className="column is-half has-text-centered " >
                       
-                      <iframe width="500" height="550" frameborder="0" style={{border: '0'}}
+                      <iframe title="Google Maps Embed" width="500" height="550" frameborder="0" style={{border: '0'}}
                         src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz9Svc6gP3okReatCJ8lo90M&key=AIzaSyBBKJtqXSKlPlywdj_TgmD91iiFZPpcXm4" allowfullscreen>
                       </iframe>
                     </div>
