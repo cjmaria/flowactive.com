@@ -42,12 +42,12 @@ const CompanyBar = class extends React.Component {
 
   render() {
     return (
-      <div className="companybar">
+      <div>
         <nav
           className={this.state.containerClass}
           role="navigation"
           aria-label="main-navigation"
-          style={{ position: this.state.position, top: this.state.top }}
+          style={{ position: this.state.position, top: this.state.top, zIndex: '10'}}
         >
           <div onScroll={this.handleScroll}>
             <div

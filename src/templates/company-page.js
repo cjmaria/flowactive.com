@@ -14,6 +14,7 @@ export const CompanyPageTemplate = ({
   missionHeading,
   missionSubheading,
   aboutUsTitle,
+  aboutUsHeaderImage,
   aboutUsSubtitle,
   aboutUsSection1,
   aboutUsSection1Image,
@@ -24,15 +25,13 @@ export const CompanyPageTemplate = ({
   aboutUsLogo3,
   aboutUsLocationHeading,
   aboutUsLocationImage1,
-  aboutUsLocationImage2,
-  aboutUsLocationImage3,
   aboutUsAddress,
   contentComponent,
 }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <div>
+    <div className="content">
       <div>
         <div
           className="full-width-image margin-top-0"
@@ -63,78 +62,89 @@ export const CompanyPageTemplate = ({
           </div>
         </div>
       </div>
-      <section className="section section--gradient" style={{zIndex: '-1', position: 'relative'}}>
-        <div className="container">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="section">
-                <h1 className="title has-text-centered has-text-weight-bold is-bold-light">
-                  {aboutUsTitle}
-                </h1>
-                <div className="columns is-multiline">
-                  <div className="column is-half has-vcentered-text" >
-                    <p className="is-size-6-mobile is-size-6-tablet is-size-4-widescreen">
-                      {aboutUsSection1}
-                    </p>
-                  </div>
-                  <div className="column is-half">
-                    <div style={{paddingLeft: '17%', paddingRight: '25%'}}>
-                      <PreviewCompatibleImage imageInfo={aboutUsSection1Image} />
+      <CompanyBar />
+      <div className="container" style={{ position: 'relative' }}>
+        <section className="section section--gradient" style={{position: 'relative', paddingTop: '1rem'}}>
+          <div className="container">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <div className="section">
+                  <h1 className="title has-text-centered has-text-weight-bold is-bold-light">
+                    {aboutUsTitle}
+                  </h1>
+                  <div className="columns is-multiline is-centered">
+                    <div className="column is-four-fifths" style={{marginBottom: '2.5rem'}}>
+                      <PreviewCompatibleImage imageInfo={aboutUsHeaderImage} />
+                    </div>
+                    <div className="column is-half has-vcentered-text" >
+                      <p className="is-size-6-mobile is-size-6-tablet is-size-4-widescreen">
+                        {aboutUsSection1}
+                      </p>
+                    </div>
+                    <div className="column is-half">
+                      <div style={{paddingLeft: '17%', paddingRight: '25%'}}>
+                        <PreviewCompatibleImage imageInfo={aboutUsSection1Image} />
+                      </div>
+                      
+                    </div>
+                    <div className="column is-half " >
+                      <div style={{paddingLeft: '5%', paddingRight: '5%'}}>
+                        <PreviewCompatibleImage imageInfo={aboutUsSection2Image} />
+                      </div>
+                    </div>
+                    <div className="column is-half has-vcentered-text">
+
+                      <p className="is-size-6-mobile is-size-6-tablet is-size-4-widescreen">
+                        {aboutUsSection2}
+                      </p>
+                      
+                    </div>
+                    <div className="column is-half has-vcentered-text" >
+                      <PageContent className="content" content={content} />
+                    </div>
+                    <div className="column is-half ">
+                      <div style={{paddingLeft: '35%', paddingRight: '35%', paddingTop: '2rem'}}>
+                        <PreviewCompatibleImage imageInfo={aboutUsLogo1} />
+                      </div>
+                      <br />
+                      <br />
+                      <div style={{paddingLeft: '15%', paddingRight: '15%'}}>
+                        <PreviewCompatibleImage imageInfo={aboutUsLogo2} />
+                      </div>          
+                      <br />
+                      <br />
+                      <div style={{paddingLeft: '15%', paddingRight: '15%'}}>
+                        <PreviewCompatibleImage imageInfo={aboutUsLogo3} />
+                      </div>
+                    </div>
+
+                    <div className="column is-full has-text-centered " style={{paddingTop: '5rem'}}>
+                      <p className="is-size-3-mobile is-size-3-tablet is-size-3-widescreen has-text-weight-bold is-bold-light">
+                        {aboutUsLocationHeading}
+                      </p>
                     </div>
                     
-                  </div>
-                  <div className="column is-half " >
-                    <div style={{paddingLeft: '5%', paddingRight: '5%'}}>
-                      <PreviewCompatibleImage imageInfo={aboutUsSection2Image} />
+                    <div className="column is-half has-text-centered " >
+                      
+                      <p className="is-size-3-mobile is-size-3-tablet is-size-3-widescreen " style={{paddingTop: '0.5rem', paddingBottom: '1rem'}}>
+                        {aboutUsAddress}
+                      </p>
+                      <PreviewCompatibleImage imageInfo={aboutUsLocationImage1} />
                     </div>
-                  </div>
-                  <div className="column is-half has-vcentered-text">
+                    <div className="column is-half has-text-centered " >
+                      
+                      <iframe width="500" height="550" frameborder="0" style={{border: '0'}}
+                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz9Svc6gP3okReatCJ8lo90M&key=AIzaSyBBKJtqXSKlPlywdj_TgmD91iiFZPpcXm4" allowfullscreen>
+                      </iframe>
+                    </div>
 
-                    <p className="is-size-6-mobile is-size-6-tablet is-size-4-widescreen">
-                      {aboutUsSection2}
-                    </p>
-                    
-                  </div>
-                  <div className="column is-half has-vcentered-text" >
-                    <PageContent className="content" content={content} />
-                  </div>
-                  <div className="column is-half ">
-                    <div style={{paddingLeft: '35%', paddingRight: '35%', paddingTop: '2rem'}}>
-                      <PreviewCompatibleImage imageInfo={aboutUsLogo1} />
-                    </div>
-                    <br />
-                    <br />
-                    <div style={{paddingLeft: '15%', paddingRight: '15%'}}>
-                      <PreviewCompatibleImage imageInfo={aboutUsLogo2} />
-                    </div>          
-                    <br />
-                    <br />
-                    <div style={{paddingLeft: '15%', paddingRight: '15%'}}>
-                      <PreviewCompatibleImage imageInfo={aboutUsLogo3} />
-                    </div>
-                  </div>
-                  
-                  <div className="column is-half has-text-centered " style={{paddingTop: '7rem'}}>
-                    <p className="is-size-3-mobile is-size-3-tablet is-size-3-widescreen has-text-weight-bold is-bold-light">
-                      {aboutUsLocationHeading}
-                    </p>
-                    <p className="is-size-3-mobile is-size-3-tablet is-size-3-widescreen " style={{paddingTop: '0.5rem', paddingBottom: '1rem'}}>
-                      {aboutUsAddress}
-                    </p>
-                    <PreviewCompatibleImage imageInfo={aboutUsLocationImage2} />
-                  </div>
-                  <div className="column is-half has-text-centered " style={{paddingTop: '7rem'}}>
-                    <iframe width="500" height="550" frameborder="0" style={{border: '0'}}
-                      src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz9Svc6gP3okReatCJ8lo90M&key=AIzaSyBBKJtqXSKlPlywdj_TgmD91iiFZPpcXm4" allowfullscreen>
-                    </iframe>
-                  </div>
-
-                </div>                
+                  </div>                
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   )
 }
@@ -145,6 +155,7 @@ CompanyPageTemplate.propTypes = {
   missionHeading: PropTypes.string,
   missionSubheading: PropTypes.string,
   aboutUsTitle: PropTypes.string,
+  aboutUsHeaderImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   aboutUsSubtitle: PropTypes.string,
   aboutUsSection1: PropTypes.string,
   aboutUsSection1Image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -155,8 +166,6 @@ CompanyPageTemplate.propTypes = {
   aboutUsLogo3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   aboutUsLocationHeading: PropTypes.string,
   aboutUsLocationImage1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  aboutUsLocationImage2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  aboutUsLocationImage3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   aboutUsAddress: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
@@ -173,6 +182,7 @@ const CompanyPage = ({ data }) => {
         missionHeading={post.frontmatter.missionStatement.heading}
         missionSubheading={post.frontmatter.missionStatement.subheading}
         aboutUsTitle={post.frontmatter.aboutUs.title}
+        aboutUsHeaderImage={post.frontmatter.aboutUs.headerImage}
         aboutUsSubtitle={post.frontmatter.aboutUs.subtitle}
         aboutUsSection1={post.frontmatter.aboutUs.section1}
         aboutUsSection1Image={post.frontmatter.aboutUs.section1Image}
@@ -183,8 +193,6 @@ const CompanyPage = ({ data }) => {
         aboutUsLogo3={post.frontmatter.aboutUs.logo3}
         aboutUsLocationHeading={post.frontmatter.aboutUs.locationHeading}
         aboutUsLocationImage1={post.frontmatter.aboutUs.locationImage1}
-        aboutUsLocationImage2={post.frontmatter.aboutUs.locationImage2}
-        aboutUsLocationImage3={post.frontmatter.aboutUs.locationImage3}
         aboutUsAddress={post.frontmatter.aboutUs.address}
         title={post.frontmatter.title}
         content={post.html}
@@ -219,6 +227,13 @@ export const companyPageQuery = graphql`
           title
           subtitle
           section1
+          headerImage {
+            childImageSharp {
+              fluid(maxWidth: 900, quality: 70) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
           section1Image {
             childImageSharp {
               fluid(maxWidth: 512, quality: 60) {
@@ -259,20 +274,6 @@ export const companyPageQuery = graphql`
           locationImage1 {
             childImageSharp {
               fluid(maxWidth: 480, quality: 50) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          locationImage2 {
-            childImageSharp {
-              fluid(maxWidth: 400, quality: 40) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          locationImage3 {
-            childImageSharp {
-              fluid(maxWidth: 720, quality: 60) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

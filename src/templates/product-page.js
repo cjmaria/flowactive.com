@@ -73,7 +73,7 @@ export const ProductPageTemplate = ({
 
     <ProductBar containerClass="productbar" />
 
-    <div className="container" style={{ zIndex: '-1', position: 'relative' }}>
+    <div className="container" style={{ position: 'relative' }}>
       <div className="section">
         <div className="columns" id="HowItWorks">
           <div className="column is-full has-text-centered">
