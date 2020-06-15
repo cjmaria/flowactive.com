@@ -17,9 +17,34 @@ aboutUs:
   logo1: /img/NSFLogoBlack.png
   logo2: /img/NSFSeedFund.png
   logo3: /img/NewHampshire.png
+  introVideo:
+    ytid: rNRrZtQEN1U
+    alttext: FlowActive FirstDrops Intro Video
   locationHeading: We are proudly based in Troy, New York 
   locationImage1: /img/FrearBuilding.jpg
   address: 2 3rd, Suite 370, Troy, NY 12180
+
+team:
+  title: Meet the Team
+  blurb: These are the folks that make FlowActive. We're especially proud of our diverse skills and backgrounds. We are innovators who make great things happen for our customers.
+
+careers:
+  title: Join Us
+  jobPostings:
+    - role: Assembly and Test Technician
+      description: This role works with the engineering and software development teams to assemble and test devices, maintain inventory, and develop manufacturing processes.
+      location: Troy, NY
+      link: https://flowactive-public-documents.s3.amazonaws.com/JobPostings/AssemblyAndTestTechnician.pdf
+    - role: Marketing & Sales Intern
+      description: We are seeking motivated students to work with us to engage customers, create content, and build professional relationships.
+      location: Troy, NY
+      link: https://flowactive-public-documents.s3.amazonaws.com/JobPostings/StartupIntern.pdf
+    - role: Marketing & Sales Specialist
+      description: Joining our marketing and sales team, this role would work to develop new business relationships, engage customers, and assist with content creation and social media.
+      location: Troy, NY
+      link: https://flowactive-public-documents.s3.amazonaws.com/JobPostings/TechnologyMarketingAndSales.pdf
+
+
 
 
 

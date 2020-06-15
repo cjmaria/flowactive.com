@@ -1,6 +1,7 @@
 ---
 templateKey: team-post
-name: Avin Joshi
+first: Avin
+last: Joshi
 role: Advisor
 ordering: 204
 iscoreteam: false

@@ -1,14 +1,14 @@
 ---
 templateKey: team-post
-first: Dave
-last: Waldek
-role: CFO
+first: Firmin
+last: Alexander
+role: Digital Marketing Consultant
 ordering: 102
 iscoreteam: true
 isboardmember: false
 isadvisor: false
 oneliner: 
-headshotimage: /img/TeamThumbnails/DaveWaldek2.jpg
+headshotimage: /img/TeamThumbnails/FirminAlexander.jpg
 tags:
   - Team
 ---

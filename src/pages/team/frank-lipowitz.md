@@ -1,13 +1,14 @@
 ---
 templateKey: team-post
-name: Frank Lipowitz
+first: Frank
+last: Lipowitz
 role: Senior Engineer, Hardware Lead
 ordering: 103
 iscoreteam: true
 isboardmember: false
 isadvisor: false
 oneliner: 
-headshotimage: /img/TeamThumbnails/FrankLipowitz.jpg
+headshotimage: /img/TeamThumbnails/FrankLipowitz3.jpg
 tags:
   - Team
 ---

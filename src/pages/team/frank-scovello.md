@@ -1,9 +1,10 @@
 ---
 templateKey: team-post
-name: Frank Scovello
-role: Board Member, Commercial Leader
-ordering: 19
-iscoreteam: false
+first: Frank
+last: Scovello
+role: Commercialization Lead
+ordering: 106
+iscoreteam: true
 isboardmember: true
 isadvisor: false
 oneliner: Frank has over 20 years of experience in launching technology products for both startups and global corporations

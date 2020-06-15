@@ -1,7 +1,8 @@
 ---
 templateKey: team-post
-name: Raul Palm
-role: Board Member
+first: Raul
+last: Palm
+role: Advisor
 ordering: 2
 iscoreteam: false
 isboardmember: true

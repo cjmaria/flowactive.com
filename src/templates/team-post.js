@@ -93,7 +93,8 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        name
+        first
+        last
         role
         ordering
         iscoreteam

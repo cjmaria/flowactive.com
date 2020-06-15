@@ -5,6 +5,9 @@ import TransparentLayout from '../components/TransparentLayout'
 import Content, { HTMLContent } from '../components/Content'
 import CompanyBar from '../components/CompanyBar'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import CoreTeamRoll from '../components/CoreTeamRoll'
+import YouTubeVideo from '../components/YouTubeVideo'
+import JobPostings from '../components/JobPostings'
 
 
 export const CompanyPageTemplate = ({
@@ -23,9 +26,14 @@ export const CompanyPageTemplate = ({
   aboutUsLogo1,
   aboutUsLogo2,
   aboutUsLogo3,
+  aboutUsIntroVideo,
   aboutUsLocationHeading,
   aboutUsLocationImage1,
   aboutUsAddress,
+  teamTitle,
+  teamBlurb,
+  careersTitle,
+  careersJobPostings,
   contentComponent,
 }) => {
   const PageContent = contentComponent || Content
@@ -67,7 +75,7 @@ export const CompanyPageTemplate = ({
         <section className="section section--gradient" style={{position: 'relative', paddingTop: '1rem'}}>
           <div className="container">
             <div className="columns">
-              <div className="column is-10 is-offset-1">
+              <div id="about-us" className="column is-10 is-offset-1">
                 <div className="section">
                   <h1 className="title has-text-centered has-text-weight-bold is-bold-light">
                     {aboutUsTitle}
@@ -99,7 +107,7 @@ export const CompanyPageTemplate = ({
                       </p>
                       
                     </div>
-                    <div className="column is-half has-vcentered-text" >
+                    <div className="column is-half" style={{paddingTop: '2rem'}} >
                       <PageContent className="content" content={content} />
                     </div>
                     <div className="column is-half ">
@@ -119,25 +127,46 @@ export const CompanyPageTemplate = ({
                     </div>
 
                     <div className="column is-full has-text-centered " style={{paddingTop: '5rem'}}>
-                      <p className="is-size-3-mobile is-size-3-tablet is-size-3-widescreen has-text-weight-bold is-bold-light">
+                      <YouTubeVideo videoInfo={aboutUsIntroVideo} />
+                    </div>
+                    <div className="column is-full has-text-centered " style={{paddingTop: '5rem'}}>
+                      <p className="title has-text-centered has-text-weight-bold is-bold-light is-size-4-mobile is-size-3-tablet is-size-2-widescreen">
                         {aboutUsLocationHeading}
                       </p>
                     </div>
                     
                     <div className="column is-half has-text-centered " >
-                      
-                      <p className="is-size-3-mobile is-size-3-tablet is-size-3-widescreen " style={{paddingTop: '0.5rem', paddingBottom: '1rem'}}>
+                      <p className="is-size-4-mobile is-size-3-tablet is-size-3-widescreen " style={{paddingTop: '0.5rem', paddingBottom: '1rem'}}>
                         {aboutUsAddress}
                       </p>
                       <PreviewCompatibleImage imageInfo={aboutUsLocationImage1} />
                     </div>
                     <div className="column is-half has-text-centered " >
+                      <div style={{position: 'relative', paddingBottom: '56.25%', height: '100%', overflow: 'hidden', maxWidth: '100%'}}>
+                        <iframe title="Google Maps Embed" frameborder="0" style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%'}} 
+                          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz9Svc6gP3okReatCJ8lo90M&key=AIzaSyBBKJtqXSKlPlywdj_TgmD91iiFZPpcXm4" allowfullscreen>
+                        </iframe>
+                      </div>
                       
-                      <iframe title="Google Maps Embed" width="500" height="550" frameborder="0" style={{border: '0'}}
-                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJz9Svc6gP3okReatCJ8lo90M&key=AIzaSyBBKJtqXSKlPlywdj_TgmD91iiFZPpcXm4" allowfullscreen>
-                      </iframe>
                     </div>
-
+                    
+                    <div id="our-team" className="column is-full has-text-centered " style={{paddingTop: '3rem', paddingBottom: '2rem'}}>
+                      <h2 className="title has-text-centered has-text-weight-bold is-bold-light is-size-3-mobile is-size-3-tablet is-size-2-widescreen">
+                      {teamTitle}
+                      </h2>
+                      <p className="is-size-6-mobile is-size-6-tablet is-size-4-widescreen">
+                        {teamBlurb}
+                      </p>
+                    </div>
+                    <CoreTeamRoll />
+                    <div id="careers" className="column is-full has-text-centered " style={{paddingTop: '3rem'}}>
+                      <h3 className="title has-text-centered has-text-weight-bold is-bold-light is-size-3-mobile is-size-3-tablet is-size-2-widescreen">
+                        {careersTitle}
+                      </h3>
+                      
+                    </div>
+                    
+                    <JobPostings jobPostings={careersJobPostings} />
                   </div>                
                 </div>
               </div>
@@ -164,9 +193,17 @@ CompanyPageTemplate.propTypes = {
   aboutUsLogo1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   aboutUsLogo2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   aboutUsLogo3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  aboutUsIntroVideo: PropTypes.shape({
+    ytid: PropTypes.string,
+    alttext: PropTypes.string,
+  }),
   aboutUsLocationHeading: PropTypes.string,
   aboutUsLocationImage1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   aboutUsAddress: PropTypes.string,
+  teamTitle: PropTypes.string,
+  teamBlurb: PropTypes.string,
+  careersTitle: PropTypes.string,
+  careersJobPostings: PropTypes.array,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
@@ -191,9 +228,14 @@ const CompanyPage = ({ data }) => {
         aboutUsLogo1={post.frontmatter.aboutUs.logo1}
         aboutUsLogo2={post.frontmatter.aboutUs.logo2}
         aboutUsLogo3={post.frontmatter.aboutUs.logo3}
+        aboutUsIntroVideo={post.frontmatter.aboutUs.introVideo}
         aboutUsLocationHeading={post.frontmatter.aboutUs.locationHeading}
         aboutUsLocationImage1={post.frontmatter.aboutUs.locationImage1}
         aboutUsAddress={post.frontmatter.aboutUs.address}
+        teamTitle={post.frontmatter.team.title}
+        teamBlurb={post.frontmatter.team.blurb}
+        careersTitle={post.frontmatter.careers.title}
+        careersJobPostings={post.frontmatter.careers.jobPostings}
         title={post.frontmatter.title}
         content={post.html}
       />
@@ -270,6 +312,10 @@ export const companyPageQuery = graphql`
               }
             }
           }
+          introVideo {
+            ytid
+            alttext
+          }
           locationHeading
           locationImage1 {
             childImageSharp {
@@ -280,7 +326,19 @@ export const companyPageQuery = graphql`
           }
           address
         }
-        
+        team {
+          title
+          blurb
+        }
+        careers {
+          title
+          jobPostings {
+            role
+            description
+            location
+            link
+          }
+        }
       }
     }
   }

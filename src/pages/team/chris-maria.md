@@ -1,13 +1,14 @@
 ---
 templateKey: team-post
-name: Chris Maria
-role: Systems Engineer, Architecture Lead
-ordering: 106
+first: Chris
+last: Maria
+role: Software Engineer
+ordering: 107
 iscoreteam: true
 isboardmember: false
 isadvisor: false
 oneliner: 
-headshotimage: /img/TeamThumbnails/ChrisMaria.jpg
+headshotimage: /img/TeamThumbnails/ChrisMaria2.jpg
 tags:
   - Team
 ---

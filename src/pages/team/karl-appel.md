@@ -1,6 +1,7 @@
 ---
 templateKey: team-post
-name: Karl Appel
+first: Karl
+last: Appel
 role: Software Engineer, Software Lead
 ordering: 103
 iscoreteam: true

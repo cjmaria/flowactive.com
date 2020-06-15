@@ -1,6 +1,7 @@
 ---
 templateKey: team-post
-name: Morris Kalichman
+first: Morris
+last: Kalichman
 role: Advisor
 ordering: 205
 iscoreteam: false

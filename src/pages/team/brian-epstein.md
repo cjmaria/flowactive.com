@@ -1,6 +1,7 @@
 ---
 templateKey: team-post
-name: Brian Epstein
+first: Brian 
+last: Epstein
 role: Board Member
 ordering: 1
 iscoreteam: false

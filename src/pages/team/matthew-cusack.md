@@ -1,7 +1,8 @@
 ---
 templateKey: team-post
-name: Matthew Cusack
-role: President, Board Member
+first: Matthew
+last: Cusack
+role: President, Analytics Lead
 ordering: 101
 iscoreteam: true
 isboardmember: true

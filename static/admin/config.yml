@@ -34,7 +34,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team-post"}
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "First Name", name: "first", widget: "string"}
+      - {label: "Last Name", name: "last", widget: "string"}
       - {label: "Role", name: "role", widget: "string"}
       - {label: "Page Order", name: "ordering", widget: "number"}
       - {label: "Is Core Team", name: "iscoreteam", widget: "boolean"}

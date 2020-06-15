@@ -11,12 +11,14 @@ $flowactive-green: #56B947
 $primary: $flowactive-blue
 $primary-invert: $flowactive-blue-invert
 $body-color: #333
-$white: #efeef1
+$white: #f1f2f3
 $info: #fff
 
 $size-1: 4rem
 $size-2: 2.8rem
-
+$size-4: 1.5rem
+$size-5: 1.25rem
+$size-6: 1rem
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
@@ -33,10 +35,13 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
 .companybar-menu .navbar-start .navbar-item
   color: #fff !important
   margin-left: 1rem 
+  &:focus
+    background-color: $flowactive-dark-blue !important
   &:hover
     background-color: #2f6caa !important
     border-radius: 0.36rem
     box-shadow: 0px 0px 5px #1F4871
+
 
 .companybar-menu
   font-family: $font-family-menubar
@@ -91,10 +96,13 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
 
 .navbar-transparent-menu .navbar-item
   color: rgb(254, 254, 254) !important
+  &:focus
+    background-color: #ffffff00 !important
   &:hover
     color: #fff !important
     font-weight: 700 !important
     background-color: #ffffff00
+
 
 // Regular Navbar
 .navbar .navbar-menu
@@ -114,9 +122,12 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
 
 .navbar-menu .navbar-item
   color: #333 !important
+  &:focus
+    background-color: #ffffff00 !important
   &:hover
     color: #000 !important
     background-color: #ffffff00
+
 
 .navbar-burger
   background-color: #ffffff00 !important
@@ -181,6 +192,8 @@ $font-family-menubar: "Avenir Next Medium", "Tahoma", "Arial", "Roboto", -apple-
     background-color: #2f6caa !important
     border-radius: 0.36rem
     box-shadow: 0px 0px 5px #1F4871
+  &:focus
+    background-color: $flowactive-blue !important
 
 
 .mainpage-button-spacing
@@ -293,9 +306,6 @@ footer.footer
 $menu-item-color: $white-ter
 $menu-item-hover-color: $flowactive-blue !important
 $menu-item-hover-background-color: $flowactive-blue
-$menu-item-active-color: $flowactive-blue-invert
-$menu-item-active-background-color:	$flowactive-blue-invert
-$menu-list-border-left: 1px solid $flowactive-blue-invert
 $menu-label-color: $white-ter
 
 .menu-label
@@ -334,15 +344,18 @@ $menu-label-color: $white-ter
 
 .team-list-item header
   display: flex;
-  margin-bottom: 1em;
+  margin-bottom: 0.5rem;
 
 .team-list-item .featured-thumbnail
-  flex-basis: 45%;
+  flex-basis: 60%;
 
 .teamroll-thumbnail-header
   display: flex;
   align-items: center
   justify-content: center
+
+.teamroll-thumbnail-header .featured-thumbnail .gatsby-image-wrapper
+  border-radius: 20px !important
 
 .has-text-weight-bold
   font-family: $font-family-sans-serif

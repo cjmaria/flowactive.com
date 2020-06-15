@@ -9,12 +9,14 @@ class CoreTeamRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline is-centered">
+      <div className="columns is-multiline is-centered" style={{display: 'flex'}}>
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-3" key={post.id}>
+            <div className="is-parent column is-one-quarter-widescreen is-one-third-tablet is-three-quarters-mobile is-centered" key={post.id} 
+                style={{marinTop: '0.66rem', paddingLeft: '1.8rem', paddingRight: '1.8rem', margin: '0', marginBottom: '1.2rem'}}>
               <article
-                className={`team-list-item tile is-info is-child box notification `}
+                className={`team-list-item is-child`}
+                style={{paddingRight: '1.5em !important', display: 'block'}}
               >
                 <header className="teamroll-thumbnail-header">
                   {post.frontmatter.headshotimage ? (
@@ -22,19 +24,20 @@ class CoreTeamRoll extends React.Component {
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.headshotimage,
-                          alt: `Headshot image thumbnail for post ${post.frontmatter.name}`,
+                          alt: `Headshot image thumbnail for post ${post.frontmatter.first} ${post.frontmatter.last}`,
+                          style: {borderRadius: '50%'}
                         }}
                       />
                     </div>
                   ) : null}
                 </header>
-                <h2 className="title has-text-centered has-text-black is-size-5">
-                  {post.frontmatter.name}
-                </h2>
+                <p className="title has-text-centered has-text-black is-size-5">
+                  {post.frontmatter.first}  {post.frontmatter.last}
+                </p>
                 <span className="subtitle has-text-centered is-size-6 is-block">
                   {post.frontmatter.role}
                 </span>
-                <p className="has-text-centered">{post.excerpt}</p>
+                
               </article>
             </div>
           ))}
@@ -56,7 +59,7 @@ export default () => (
     query={graphql`
       query CoreTeamRollQuery {
         allMarkdownRemark(
-          sort: { order: ASC, fields: [frontmatter___ordering] }
+          sort: { order: ASC, fields: [frontmatter___last] }
           filter: {
             frontmatter: {
               templateKey: { eq: "team-post" }
@@ -72,7 +75,8 @@ export default () => (
                 slug
               }
               frontmatter {
-                name
+                first
+                last
                 templateKey
                 role
                 ordering

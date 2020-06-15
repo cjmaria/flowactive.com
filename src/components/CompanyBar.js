@@ -58,13 +58,13 @@ const CompanyBar = class extends React.Component {
                 className="navbar-start has-text-centered"
                 style={{ justifyContent: 'center' }}
               >
-                <Link className="navbar-item" to="/company">
+                <Link className="navbar-item" to="/company#about-us">
                   About Us
                 </Link>
-                <Link className="navbar-item" to="/">
+                <Link className="navbar-item" to="/company#our-team">
                   Our Team
                 </Link>
-                <Link className="navbar-item" to="/">
+                <Link className="navbar-item" to="/company#careers">
                   Careers
                 </Link>
               </div>

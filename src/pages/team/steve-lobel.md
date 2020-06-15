@@ -1,6 +1,7 @@
 ---
 templateKey: team-post
-name: Steve Lobel
+first: Steve
+last: Lobel
 role: Advisor
 ordering: 203
 iscoreteam: false

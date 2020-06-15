@@ -1,6 +1,7 @@
 ---
 templateKey: team-post
-name: Jeff Cohen
+first: Jeff
+last: Cohen
 role: Advisor
 ordering: 201
 iscoreteam: false

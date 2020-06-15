@@ -75,10 +75,12 @@ export const ProductPageTemplate = ({
 
     <div className="container" style={{ position: 'relative' }}>
       <div className="section">
-        <div className="columns" id="HowItWorks">
+        <div className="columns is-multiline is-centered" id="HowItWorks">
           <div className="column is-full has-text-centered">
             <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
             <p className="is-size-5">{description}</p>
+          </div>
+          <div className="column is-three-fifths">
             <YouTubeVideo videoInfo={video} />
           </div>
         </div>

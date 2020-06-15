@@ -29,13 +29,12 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
-    "react-youtube": "7.11.2",
     "uuid": "^7.0.0"
   },
   "keywords": [
     "gatsby"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "n/a",
   "scripts": {
     "clean": "gatsby clean",
