@@ -14,15 +14,32 @@ aboutUs:
   section1Image: /img/ProductSketch.png
   section2: Our passionate technologists are always seeking new ways to put data to work to deliver actionable insights. We develop A.I. solutions to predict and prevent leaks before they happen and learn from your building to save you the most water.
   section2Image: /img/DataViewCropped.jpg
-  logo1: /img/NSFLogoBlack.png
-  logo2: /img/NSFSeedFund.png
-  logo3: /img/NewHampshire.png
+  section3: >-
+    <p style="font-size:2rem">What We've Achieved </p>
+    <ul>
+      <li>Completed NSF I-Site and received ~$750k in funding </li>
+      <li>Interviewed 700+ customers resulting in a strong go-to market strategy </li>
+      <li>Won NSF SBIR and recieved ~$225k in funding </li>
+      <li>Pilot tested pre commercial products with several major hotel brands identifying fresh water waste which totaled ~$2.7k </li>
+      <li>Winner of the New Hampshire State Business Plan Competition </li>
+      <li>Winner of the RPI Innovation award </li>
+      <li>Completed a large scale demo </li>
+      <li>Deployed our AI software at four demo sites </li>
+      <li>Partnered with three major hospitality industry internet service providers for rapid deployment </li>
+    </ul>
+  
+  section3Logo1: /img/NSFLogoBlack.png
+  section3Logo2: /img/NSFSeedFund.png
+  section3Logo3: /img/NewHampshire.png
   introVideo:
     ytid: rNRrZtQEN1U
     alttext: FlowActive FirstDrops Intro Video
   locationHeading: We are proudly based in Troy, New York 
   locationImage1: /img/FrearBuilding.jpg
-  address: 2 3rd, Suite 370, Troy, NY 12180
+  address: >-
+    Mobius Labs dba. FlowActive
+
+    2 3rd, Suite 370, Troy, NY 12180
 
 team:
   title: Meet the Team
@@ -44,22 +61,5 @@ careers:
       location: Troy, NY
       link: https://flowactive-public-documents.s3.amazonaws.com/JobPostings/TechnologyMarketingAndSales.pdf
 
-
-
-
-
-
 ---
-
-
-## What We've Achieved
-- #### Completed NSF I-Site and received ~$750k in funding
-- #### Interviewed 700+ customers resulting in a strong go-to market strategy
-- #### Won NSF SBIR and recieved ~$225k in funding
-- #### Pilot tested pre commercial products with several major hotel brands identifying fresh water waste which totaled ~$2.7k
-- #### Winner of the New Hampshire State Business Plan Competition
-- #### Winner of the RPI Innovation award
-- #### Completed a large scale demo
-- #### Deployed our AI software at four demo sites
-- #### Partnered with three major hospitality industry internet service providers for rapid deployment
 

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import TransparentLayout from '../components/TransparentLayout'
-import Content, { HTMLContent } from '../components/Content'
+import { HTMLContent } from '../components/Content'
 import CompanyBar from '../components/CompanyBar'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import CoreTeamRoll from '../components/CoreTeamRoll'
@@ -23,9 +23,10 @@ export const CompanyPageTemplate = ({
   aboutUsSection1Image,
   aboutUsSection2,
   aboutUsSection2Image,
-  aboutUsLogo1,
-  aboutUsLogo2,
-  aboutUsLogo3,
+  aboutUsSection3,
+  aboutUsSection3Logo1,
+  aboutUsSection3Logo2,
+  aboutUsSection3Logo3,
   aboutUsIntroVideo,
   aboutUsLocationHeading,
   aboutUsLocationImage1,
@@ -36,8 +37,6 @@ export const CompanyPageTemplate = ({
   careersJobPostings,
   contentComponent,
 }) => {
-  const PageContent = contentComponent || Content
-
   return (
     <div className="content">
       <div>
@@ -55,13 +54,14 @@ export const CompanyPageTemplate = ({
             <div className="columns is-centered">
               <div className="column is-three-fifths has-text-centered">
                 <h2
-                  className="has-text-weight-semibold has-text-white is-size-2-mobile is-size-1-tablet is-size-1-widescreen"
+                  className="has-text-white is-size-2-mobile is-size-1-tablet is-size-1-desktop is-flowactive-font"
                 >
                   {missionHeading}
                 </h2>
                 <br/>
                 <h3
-                  className="has-text-white is-size-6-mobile is-size-6-tablet is-size-4-widescreen"
+                  className="has-text-white is-size-6-mobile is-size-6-tablet is-size-4-desktop"
+                  style={{lineHeight: '1.2'}}
                 >
                   {missionSubheading}
                 </h3>
@@ -85,7 +85,7 @@ export const CompanyPageTemplate = ({
                       <PreviewCompatibleImage imageInfo={aboutUsHeaderImage} />
                     </div>
                     <div className="column is-half has-vcentered-text" >
-                      <p className="is-size-6-mobile is-size-6-tablet is-size-4-widescreen">
+                      <p className="is-size-6-mobile is-size-6-tablet is-size-5-desktop">
                         {aboutUsSection1}
                       </p>
                     </div>
@@ -102,27 +102,29 @@ export const CompanyPageTemplate = ({
                     </div>
                     <div className="column is-half has-vcentered-text">
 
-                      <p className="is-size-6-mobile is-size-6-tablet is-size-4-widescreen">
+                      <p className="is-size-6-mobile is-size-6-tablet is-size-5-desktop">
                         {aboutUsSection2}
                       </p>
                       
                     </div>
-                    <div className="column is-half" style={{paddingTop: '2rem'}} >
-                      <PageContent className="content" content={content} />
+                    <div className="column is-half is-size-6-mobile is-size-6-tablet is-size-5-desktop" style={{paddingTop: '2rem'}}  dangerouslySetInnerHTML={{
+                      __html: aboutUsSection3
+                    }}>
+                      
                     </div>
                     <div className="column is-half ">
                       <div style={{paddingLeft: '35%', paddingRight: '35%', paddingTop: '2rem'}}>
-                        <PreviewCompatibleImage imageInfo={aboutUsLogo1} />
+                        <PreviewCompatibleImage imageInfo={aboutUsSection3Logo1} />
                       </div>
                       <br />
                       <br />
                       <div style={{paddingLeft: '15%', paddingRight: '15%'}}>
-                        <PreviewCompatibleImage imageInfo={aboutUsLogo2} />
+                        <PreviewCompatibleImage imageInfo={aboutUsSection3Logo2} />
                       </div>          
                       <br />
                       <br />
                       <div style={{paddingLeft: '15%', paddingRight: '15%'}}>
-                        <PreviewCompatibleImage imageInfo={aboutUsLogo3} />
+                        <PreviewCompatibleImage imageInfo={aboutUsSection3Logo3} />
                       </div>
                     </div>
 
@@ -130,13 +132,13 @@ export const CompanyPageTemplate = ({
                       <YouTubeVideo videoInfo={aboutUsIntroVideo} />
                     </div>
                     <div className="column is-full has-text-centered " style={{paddingTop: '5rem'}}>
-                      <p className="title has-text-centered has-text-weight-bold is-bold-light is-size-4-mobile is-size-3-tablet is-size-2-widescreen">
+                      <p className="title has-text-centered has-text-weight-bold is-bold-light is-size-4-mobile is-size-3-tablet is-size-3-desktop">
                         {aboutUsLocationHeading}
                       </p>
                     </div>
                     
                     <div className="column is-half has-text-centered " >
-                      <p className="is-size-4-mobile is-size-3-tablet is-size-3-widescreen " style={{paddingTop: '0.5rem', paddingBottom: '1rem'}}>
+                      <p className="is-size-4-mobile is-size-3-tablet is-size-3-desktop " style={{paddingTop: '0.5rem', paddingBottom: '1rem', whiteSpace: 'pre-line'}}>
                         {aboutUsAddress}
                       </p>
                       <PreviewCompatibleImage imageInfo={aboutUsLocationImage1} />
@@ -151,16 +153,16 @@ export const CompanyPageTemplate = ({
                     </div>
                     
                     <div id="our-team" className="column is-full has-text-centered " style={{paddingTop: '3rem', paddingBottom: '2rem'}}>
-                      <h2 className="title has-text-centered has-text-weight-bold is-bold-light is-size-3-mobile is-size-3-tablet is-size-2-widescreen">
+                      <h2 className="title has-text-centered has-text-weight-bold is-bold-light is-size-3-mobile is-size-3-tablet is-size-2-desktop">
                       {teamTitle}
                       </h2>
-                      <p className="is-size-6-mobile is-size-6-tablet is-size-4-widescreen">
+                      <p className="is-size-6-mobile is-size-6-tablet is-size-4-desktop">
                         {teamBlurb}
                       </p>
                     </div>
                     <CoreTeamRoll />
                     <div id="careers" className="column is-full has-text-centered " style={{paddingTop: '3rem'}}>
-                      <h3 className="title has-text-centered has-text-weight-bold is-bold-light is-size-3-mobile is-size-3-tablet is-size-2-widescreen">
+                      <h3 className="title has-text-centered has-text-weight-bold is-bold-light is-size-3-mobile is-size-3-tablet is-size-2-desktop">
                         {careersTitle}
                       </h3>
                       
@@ -190,9 +192,10 @@ CompanyPageTemplate.propTypes = {
   aboutUsSection1Image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   aboutUsSection2: PropTypes.string,
   aboutUsSection2Image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  aboutUsLogo1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  aboutUsLogo2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  aboutUsLogo3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  aboutUsSection3: PropTypes.string,
+  aboutUsSection3Logo1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  aboutUsSection3Logo2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  aboutUsSection3Logo3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   aboutUsIntroVideo: PropTypes.shape({
     ytid: PropTypes.string,
     alttext: PropTypes.string,
@@ -225,9 +228,10 @@ const CompanyPage = ({ data }) => {
         aboutUsSection1Image={post.frontmatter.aboutUs.section1Image}
         aboutUsSection2={post.frontmatter.aboutUs.section2}
         aboutUsSection2Image={post.frontmatter.aboutUs.section2Image}
-        aboutUsLogo1={post.frontmatter.aboutUs.logo1}
-        aboutUsLogo2={post.frontmatter.aboutUs.logo2}
-        aboutUsLogo3={post.frontmatter.aboutUs.logo3}
+        aboutUsSection3={post.frontmatter.aboutUs.section3}
+        aboutUsSection3Logo1={post.frontmatter.aboutUs.section3Logo1}
+        aboutUsSection3Logo2={post.frontmatter.aboutUs.section3Logo2}
+        aboutUsSection3Logo3={post.frontmatter.aboutUs.section3Logo3}
         aboutUsIntroVideo={post.frontmatter.aboutUs.introVideo}
         aboutUsLocationHeading={post.frontmatter.aboutUs.locationHeading}
         aboutUsLocationImage1={post.frontmatter.aboutUs.locationImage1}
@@ -291,21 +295,22 @@ export const companyPageQuery = graphql`
               }
             }
           }
-          logo1 {
+          section3
+          section3Logo1 {
             childImageSharp {
               fluid(maxWidth: 400, quality: 40) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
-          logo2 {
+          section3Logo2 {
             childImageSharp {
               fluid(maxWidth: 400, quality: 40) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
-          logo3 {
+          section3Logo3 {
             childImageSharp {
               fluid(maxWidth: 400, quality: 40) {
                 ...GatsbyImageSharpFluid_withWebp
