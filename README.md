@@ -1,5 +1,5 @@
-# FlowActive.com
-This repo contains an the FlowActive website built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://jamstackdemo.cjmaria.com)**.
+# Netlify CMS Proof of Concept
+This repo contains a demo of the FlowActive website built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://jamstackdemo.cjmaria.com)**.
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
